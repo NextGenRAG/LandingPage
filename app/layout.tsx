@@ -1,6 +1,6 @@
-import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/sonner";
-import { cn } from "@/lib/utils";
+import { ThemeProvider } from "../components/theme-provider";
+import { Toaster } from "../components/ui/sonner";
+import { cn } from "../lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
@@ -10,8 +10,8 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 export const metadata: Metadata = {
-  title: "Magic UI",
-  description: "The startup template from Magic UI",
+  title: "Coursebite",
+  description: "The first all-in-one Integrated Learning Environment as a Platform",
 };
 
 export default function RootLayout({
