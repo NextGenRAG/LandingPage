@@ -1,12 +1,12 @@
-import { buttonVariants } from "@/components/ui/button";
-import { UserAuthForm } from "@/components/user-auth-form";
-import { cn } from "@/lib/utils";
+import { buttonVariants } from "../../../components/ui/button";
+import { UserAuthForm } from "../../../components/user-auth-form";
+import { cn } from "../../../lib/utils";
 import { ChevronLeft } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Login | Magic UI",
+  title: "Login | Coursebite",
   description: "Login to your account",
 };
 
