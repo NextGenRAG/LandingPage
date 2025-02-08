@@ -1,8 +1,8 @@
 "use client";
 
-import Marquee from "@/components/magicui/marquee";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import Marquee from "../magicui/marquee";
+import { buttonVariants } from "../ui/button";
+import { cn } from "../../lib/utils";
 import { motion, useAnimation, useInView } from "framer-motion";
 import {
   BarChart,
