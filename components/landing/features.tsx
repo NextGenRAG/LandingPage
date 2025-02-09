@@ -4,19 +4,19 @@ import FlickeringGrid from "../magicui/flickering-grid";
 import Ripple from "../magicui/ripple";
 import Safari from "../magicui/safari";
 import Section from "../ui/section";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { motion } from "framer-motion";
 
 const features = [
   {
-    title: "Advanced AI Algorithms",
+    title: "Review Your Course Material",
     description:
-      "Our platform utilizes cutting-edge AI algorithms to provide accurate and efficient solutions for your business needs.",
+      "Use our curated study guides and resources to reinforce your learning and improve your understanding of complex concepts.",
     className: "hover:bg-red-500/10 transition-all duration-500 ease-out",
     content: (
       <>
         <Safari
-          src={`/dashboard.png`}
+          src={`/review.png`}
           url="https://acme.ai"
           className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-y-[-10px] transition-all duration-300"
         />
@@ -24,23 +24,23 @@ const features = [
     ),
   },
   {
-    title: "Secure Data Handling",
+    title: "Reinforce Your Learning",
     description:
-      "We prioritize your data security with state-of-the-art encryption and strict privacy protocols, ensuring your information remains confidential.",
+      "Utilize active recall and spaced repetition techniques to improve your memory retention and recall of key concepts.",
     className:
       "order-3 xl:order-none hover:bg-blue-500/10 transition-all duration-500 ease-out",
     content: (
       <Safari
-        src={`/dashboard.png`}
+        src={`/flashcards.png`}
         url="https://acme.ai"
         className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-y-[-10px] transition-all duration-300"
       />
     ),
   },
   {
-    title: "Seamless Integration",
+    title: "Get On-Demand Tutoring",
     description:
-      "Easily integrate our AI solutions into your existing workflows and systems for a smooth and efficient operation.",
+      "Chat with our personalized AI tutors to get instant feedback and guidance on your study material.",
     className:
       "md:row-span-2 hover:bg-orange-500/10 transition-all duration-500 ease-out",
     content: (
@@ -56,7 +56,7 @@ const features = [
           width={800}
         />
         <Safari
-          src={`/dashboard.png`}
+          src={`/chat.png`}
           url="https://acme.ai"
           className="-mb-48 ml-12 mt-16 h-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-x-[-10px] transition-all duration-300"
         />
@@ -64,16 +64,16 @@ const features = [
     ),
   },
   {
-    title: "Customizable Solutions",
+    title: "Measure Your Realtime Understanding",
     description:
-      "Tailor our AI services to your specific needs with flexible customization options, allowing you to get the most out of our platform.",
+      "Use our comprehensive quizzes and assessments to gauge your understanding of key concepts, track your progress, and get realtime feedback.",
     className:
       "flex-row order-4 md:col-span-2 md:flex-row xl:order-none hover:bg-green-500/10 transition-all duration-500 ease-out",
     content: (
       <>
         <Ripple className="absolute -bottom-full" />
         <Safari
-          src={`/dashboard.png`}
+          src={`/understanding.png`}
           url="https://acme.ai"
           className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-y-[-10px] transition-all duration-300"
         />
