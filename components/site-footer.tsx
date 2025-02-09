@@ -1,4 +1,4 @@
-import { DiscordLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import { DiscordLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 const footerNavs = [
@@ -32,7 +32,7 @@ const footerNavs = [
         name: "Twitter",
       },
       {
-        href: "mailto:hello@chatcollect.com",
+        href: "mailto:support@coursebite.ai",
         name: "Email",
       },
     ],
@@ -62,7 +62,7 @@ const footerSocials = [
   {
     href: "",
     name: "Twitter",
-    icon: <TwitterLogoIcon className="h-4 w-4" />,
+    icon: <InstagramLogoIcon className="h-4 w-4" />,
   },
 ];
 
@@ -78,10 +78,10 @@ export function SiteFooter() {
                 className="h-8 w-8 text-primary"
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                Magic UI
+                Coursebite
               </span>
             </Link>
-            <p className="max-w-xs">UI Library for Design Engineers</p>
+            <p className="max-w-xs">Learning Environment as a Platform</p>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:gap-10 sm:grid-cols-3">
             {footerNavs.map((nav) => (
@@ -122,7 +122,7 @@ export function SiteFooter() {
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             Copyright © {new Date().getFullYear()}{" "}
             <Link href="/" className="cursor-pointer">
-              Magic UI
+              Coursebite Education Corporation
             </Link>
             . All Rights Reserved.
           </span>
