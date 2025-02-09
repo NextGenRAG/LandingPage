@@ -89,7 +89,7 @@ const testimonials = [
     img: "https://randomuser.me/api/portraits/men/91.jpg",
     description: (
       <p>
-        #EduSphere has revolutionized my study routine with its comprehensive resources.
+        Coursebite.ai has revolutionized my study routine with its comprehensive resources.
         <Highlight>
           The interactive modules and personalized dashboard have made learning engaging.
         </Highlight>{" "}
@@ -103,7 +103,7 @@ const testimonials = [
     img: "https://randomuser.me/api/portraits/women/12.jpg",
     description: (
       <p>
-        Discovering #LearnEdge transformed my learning experience.
+        Discovering Coursebite transformed my learning experience.
         <Highlight>
           Adaptive lessons and real-time feedback keep me on track with my studies.
         </Highlight>{" "}
@@ -117,7 +117,7 @@ const testimonials = [
     img: "https://randomuser.me/api/portraits/men/45.jpg",
     description: (
       <p>
-        #StudyHub bridges the gap between theory and practice in my academic life.
+        Coursebite bridges the gap between theory and practice in my academic life.
         <Highlight>
           Collaborative tools and resource integration have boosted my performance.
         </Highlight>{" "}
@@ -131,7 +131,7 @@ const testimonials = [
     img: "https://randomuser.me/api/portraits/women/83.jpg",
     description: (
       <p>
-        The integrated learning ecosystem at #CourseConnect is a game-changer.
+        The integrated learning ecosystem is a game-changer.
         <Highlight>
           Interactive lectures and curated content have enhanced my understanding.
         </Highlight>{" "}
@@ -145,7 +145,7 @@ const testimonials = [
     img: "https://randomuser.me/api/portraits/men/1.jpg",
     description: (
       <p>
-        #SmartLearning provides a personalized learning environment that adapts to my pace.
+        Coursebite provides a personalized learning environment that adapts to my pace.
         <Highlight>
           Its intelligent recommendations have made mastering complex topics simpler.
         </Highlight>{" "}
@@ -159,7 +159,7 @@ const testimonials = [
     img: "https://randomuser.me/api/portraits/women/5.jpg",
     description: (
       <p>
-        With #EduNexus, my learning experience is fully integrated and highly interactive.
+        With Coursebite, my learning experience is fully integrated and highly interactive.
         <Highlight>
           Seamless access to diverse learning materials has enriched my academic life.
         </Highlight>{" "}
@@ -173,7 +173,7 @@ const testimonials = [
     img: "https://randomuser.me/api/portraits/men/14.jpg",
     description: (
       <p>
-        #LearnWave offers an immersive study experience that keeps me engaged.
+        Coursebite offers an immersive study experience that keeps me engaged.
         <Highlight>
           Real-time collaboration and interactive modules set it apart.
         </Highlight>{" "}
@@ -187,7 +187,7 @@ const testimonials = [
     img: "https://randomuser.me/api/portraits/women/56.jpg",
     description: (
       <p>
-        The integrated learning ecosystem, #ScholarSpace, redefines how I approach my studies.
+        The integrated learning ecosystem redefines how I approach my studies.
         <Highlight>
           Personalized learning paths and interactive feedback have boosted my confidence.
         </Highlight>{" "}
@@ -201,7 +201,7 @@ const testimonials = [
     img: "https://randomuser.me/api/portraits/men/18.jpg",
     description: (
       <p>
-        #CampusLink has transformed my academic routine with its user-friendly design.
+        #Coursebite has transformed my academic routine with its user-friendly design.
         <Highlight>
           The platform’s innovative features facilitate effective collaboration and learning.
         </Highlight>{" "}
@@ -215,7 +215,7 @@ const testimonials = [
     img: "https://randomuser.me/api/portraits/women/73.jpg",
     description: (
       <p>
-        Studying with #StudyNet has never been more engaging.
+        Studying with Coursebite has never been more engaging.
         <Highlight>
           The integration of multimedia resources and interactive assessments enhances my understanding.
         </Highlight>{" "}
@@ -229,7 +229,7 @@ const testimonials = [
     img: "https://randomuser.me/api/portraits/men/25.jpg",
     description: (
       <p>
-        #EduMatrix simplifies complex subjects with its adaptive learning framework.
+        Coursebite simplifies complex subjects with its adaptive learning framework.
         <Highlight>
           Its smart assessments and feedback mechanisms keep me challenged and motivated.
         </Highlight>{" "}
@@ -243,7 +243,7 @@ const testimonials = [
     img: "https://randomuser.me/api/portraits/women/78.jpg",
     description: (
       <p>
-        The platform #LearnVista fits perfectly into my busy schedule.
+        The platform fits perfectly into my busy schedule.
         <Highlight>
           On-demand tutorials and interactive study sessions have redefined my learning experience.
         </Highlight>{" "}
@@ -257,7 +257,7 @@ const testimonials = [
     img: "https://randomuser.me/api/portraits/men/54.jpg",
     description: (
       <p>
-        My academic journey has been elevated by #ScholarSync.
+        My academic journey has been elevated by Coursebite.
         <Highlight>
           The blend of collaborative features and rich content makes studying dynamic.
         </Highlight>{" "}

@@ -7,7 +7,7 @@ import { SphereMask } from "../../components/magicui/sphere-mask";
 import HowItWorksSteps from "../../components/landing/how-it-works";
 import Testimonials from "../../components/landing/testimonials";
 import Features from "../../components/landing/features";
-import { WhatIsCoursebite } from "@/components/landing/what-is-coursebite";
+import { WhatIsCoursebite } from "../../components/landing/what-is-coursebite";
 
 export default async function Page() {
   return (
