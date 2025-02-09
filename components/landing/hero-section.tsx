@@ -29,7 +29,10 @@ export default function HeroSection() {
         Learn faster and reclaim your time with real instructors, expert-curated courses,
         <br className="hidden md:block" /> and a personalized learning experience.
       </p>
-      <Button className="translate-y-[-1rem] animate-fade-in gap-1 rounded-lg text-white dark:text-black opacity-0 ease-in-out [--animation-delay:600ms]">
+      <Button
+        className="translate-y-[-1rem] animate-fade-in gap-1 rounded-lg text-white dark:text-black opacity-0 ease-in-out [--animation-delay:600ms]"
+        onClick={() => window.location.href = '/app/login'}
+      >
         <span>Get Started for free </span>
         <ArrowRightIcon className="ml-1 size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
       </Button>

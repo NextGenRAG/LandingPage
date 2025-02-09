@@ -179,10 +179,10 @@ export default function CallToActionSection() {
                   Stop wasting time with ineffective study.
                 </h1>
                 <p className="mt-2">
-                  Start your 7-day free trial. No credit card required.
+                  Start your 7-day free trial.
                 </p>
                 <Link
-                  href="#"
+                  href="/app/login"
                   className={cn(
                     buttonVariants({
                       size: "lg",
