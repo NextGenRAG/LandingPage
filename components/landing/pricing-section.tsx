@@ -16,64 +16,23 @@ export const toHumanPrice = (price: number, decimals: number = 2) => {
 const demoPrices = [
   {
     id: "price_1",
-    name: "Basic",
+    name: "Essential",
     description: "A basic plan for startups and individual users",
     features: [
-      "AI-powered analytics",
-      "Basic support",
-      "5 projects limit",
-      "Access to basic AI tools",
+      "AI-Tutor",
+      "Automated Free Response Grading",
+      "Up to 5 Courses",
+      "Practice Exams",
+      "Curated Study Guides",
+      "Expert AI Lectures",
+      "First Party Courses",
+      "Community Courses",
+      "Personalized Course Plans",
+      "Verified-Instructor Courses",
+      "End-to-End Organization"
     ],
-    monthlyPrice: 1000,
-    yearlyPrice: 10000,
-    isMostPopular: false,
-  },
-  {
-    id: "price_2",
-    name: "Premium",
-    description: "A premium plan for growing businesses",
-    features: [
-      "Advanced AI insights",
-      "Priority support",
-      "Unlimited projects",
-      "Access to all AI tools",
-      "Custom integrations",
-    ],
-    monthlyPrice: 2000,
-    yearlyPrice: 20000,
-    isMostPopular: true,
-  },
-  {
-    id: "price_5",
-    name: "Enterprise",
-    description:
-      "An enterprise plan with advanced features for large organizations",
-    features: [
-      "Custom AI solutions",
-      "24/7 dedicated support",
-      "Unlimited projects",
-      "Access to all AI tools",
-      "Custom integrations",
-      "Data security and compliance",
-    ],
-    monthlyPrice: 5000,
-    yearlyPrice: 50000,
-    isMostPopular: false,
-  },
-  {
-    id: "price_6",
-    name: "Ultimate",
-    description: "The ultimate plan with all features for industry leaders",
-    features: [
-      "Bespoke AI development",
-      "White-glove support",
-      "Unlimited projects",
-      "Priority access to new AI tools",
-      "Custom integrations",
-      "Highest data security and compliance",
-    ],
-    monthlyPrice: 8000,
-    yearlyPrice: 80000,
+    monthlyPrice: 1500,
+    yearlyPrice: 15000,
     isMostPopular: false,
   },
 ];
@@ -104,8 +63,7 @@ export default function PricingSection() {
 
           <p className="mt-6 text-xl leading-8 text-black/80 dark:text-white">
             Choose an <strong>affordable plan</strong> that&apos;s packed with
-            the best features for engaging your audience, creating customer
-            loyalty, and driving sales.
+            the best features for creating optimal academic outcomes.
           </p>
         </div>
 
@@ -122,7 +80,7 @@ export default function PricingSection() {
           </span>
         </div>
 
-        <div className="mx-auto grid w-full justify-center sm:grid-cols-2 lg:grid-cols-4 flex-col gap-4">
+        <div className="flex w-full flex-col items-center justify-center">
           {demoPrices.map((price, idx) => (
             <div
               key={price.id}
