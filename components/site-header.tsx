@@ -141,7 +141,7 @@ export function SiteHeader() {
         >
           <div className="container flex h-[3.5rem] items-center justify-between">
             <Link className="text-md flex items-center" href="/">
-              CourseBite
+              Coursebite
             </Link>
 
             <button
