@@ -68,6 +68,7 @@ export default function PricingSection() {
         </div>
 
         <div className="flex w-full items-center justify-center space-x-2">
+        <span>Monthly</span>
           <Switch
             id="interval"
             onCheckedChange={(checked) => {

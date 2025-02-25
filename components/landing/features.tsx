@@ -12,13 +12,13 @@ const features = [
     title: "Review Your Course Material",
     description:
       "Use our curated study guides and resources to reinforce your learning and improve your understanding of complex concepts.",
-    className: "hover:bg-red-500/10 transition-all duration-500 ease-out",
+    className: "hover:bg-purple-500/10 transition-all duration-500 ease-out",
     content: (
       <>
         <Safari
           src={`/review.png`}
           url="https://acme.ai"
-          className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-y-[-10px] transition-all duration-300"
+          className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(75,0,130,0.5)] group-hover:translate-y-[-10px] transition-all duration-300"
         />
       </>
     ),
@@ -33,7 +33,7 @@ const features = [
       <Safari
         src={`/flashcards.png`}
         url="https://acme.ai"
-        className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-y-[-10px] transition-all duration-300"
+        className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(75,100,140,0.5)] group-hover:translate-y-[-10px] transition-all duration-300"
       />
     ),
   },
@@ -42,14 +42,14 @@ const features = [
     description:
       "Chat with our personalized AI tutors to get instant feedback and guidance on your study material.",
     className:
-      "md:row-span-2 hover:bg-orange-500/10 transition-all duration-500 ease-out",
+      "md:row-span-2 hover:bg-purple-500/10 transition-all duration-500 ease-out",
     content: (
       <>
         <FlickeringGrid
           className="z-0 absolute inset-0 [mask:radial-gradient(circle_at_center,#fff_400px,transparent_0)]"
           squareSize={4}
           gridGap={6}
-          color="#000"
+          color="#4B0082"
           maxOpacity={0.1}
           flickerChance={0.1}
           height={800}
@@ -58,7 +58,7 @@ const features = [
         <Safari
           src={`/chat.png`}
           url="https://acme.ai"
-          className="-mb-48 ml-12 mt-16 h-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-x-[-10px] transition-all duration-300"
+          className="-mb-48 ml-12 mt-16 h-full px-4 select-none drop-shadow-[0_0_28px_rgba(75,0,130,0.5)] group-hover:translate-x-[-10px] transition-all duration-300"
         />
       </>
     ),
@@ -75,7 +75,7 @@ const features = [
         <Safari
           src={`/understanding.png`}
           url="https://acme.ai"
-          className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-y-[-10px] transition-all duration-300"
+          className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(50,205,50,0.5)] group-hover:translate-y-[-10px] transition-all duration-300"
         />
       </>
     ),
