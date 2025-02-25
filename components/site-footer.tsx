@@ -74,8 +74,8 @@ export function SiteFooter() {
           <div className="mb-12 flex-col flex gap-4">
             <Link href="/" className="flex items-center gap-2">
               <img
-                src="...\app\icon.ico"
-                className="h-8 w-8 text-primary"
+                src='/logo.svg'
+                className="h-10 w-10"
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 Coursebite
