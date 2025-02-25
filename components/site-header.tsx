@@ -99,9 +99,12 @@ export function SiteHeader() {
     <>
       <header className="fixed left-0 top-0 z-50 w-full translate-y-[-1rem] animate-fade-in border-b opacity-0 backdrop-blur-[12px] [--animation-delay:600ms]">
         <div className="container flex h-[3.5rem] items-center justify-between">
+          <div className="flex items-center gap-x-1">
+          <img src="/logo.svg" alt="logo" className="flex item-center" />
           <Link className="text-md flex items-center" href="/">
             Coursebite
           </Link>
+          </div>
 
           <div className="ml-auto flex h-full items-center">
             <Link className="mr-6 text-sm" href="/app/login">
