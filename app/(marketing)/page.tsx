@@ -17,7 +17,7 @@ export default async function Page() {
       <WhatIsCoursebite />
       <HowItWorksSteps />
       <Features />
-      <SphereMask />
+      {/* <SphereMask /> */}
       <PricingSection />
       <Testimonials />
       <CallToActionSection />
