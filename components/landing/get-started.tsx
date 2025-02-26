@@ -29,9 +29,9 @@ const data = [
   },
 ];
 
-export default function HowItWorksSteps() {
+export default function GetStartedSteps() {
   return (
-    <Section title="How it works" subtitle="Get started in 3 steps">
+    <Section title="" subtitle="Get started in 3 steps">
       <Features data={data} />
     </Section>
   );
