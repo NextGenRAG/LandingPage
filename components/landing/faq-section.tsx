@@ -31,7 +31,7 @@ import {
     {
       question: "Can CourseBite be utilized by educators?",
       answer:
-        "Yes, although there are still features currently in development that need to be added to replace a platform like Canva or Blackboard, educators can leverage the features to make sure all students get high quality practice material with no addional effort from the educator.",
+        "Yes, although there are still features currently in development that need to be added to replace a (LMS) Learning Management System like Canva or Blackboard, educators can leverage the features to make sure all students get high quality practice material with no addional effort from the educator.",
     },
     {
         question: "What if CourseBite does not carry the course I need?",

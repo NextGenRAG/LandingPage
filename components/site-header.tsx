@@ -31,104 +31,66 @@ import { useEffect, useState } from "react";
 // ];
 
 export function SiteHeader() {
-  // const mobilenavbarVariant = {
-  //   initial: {
-  //     opacity: 0,
-  //     scale: ,
-  //   },
-  //   animate: {
-  //     scale: 1,
-  //     opacity: 1,
-  //     transition: {
-  //       duration: 0.2,
-  //       ease: "easeOut",
-  //     },
-  //   },
-  //   exit: {
-  //     opacity: 0,
-  //     transition: {
-  //       duration: 0.2,
-  //       delay: 0.2,
-  //       ease: "easeOut",
-  //     },
-  //   },
-  // };
-
-  // const mobileLinkVar = {
-  //   initial: {
-  //     y: "-20px",
-  //     opacity: 0,
-  //   },
-  //   open: {
-  //     y: 0,
-  //     opacity: 1,
-  //     transition: {
-  //       duration: 0.3,
-  //       ease: "easeOut",
-  //     },
-  //   },
-  // };
-
-  // const containerVariants = {
-  //   open: {
-  //     transition: {
-  //       staggerChildren: 0.06,
-  //     },
-  //   },
-  // };
-
-  // const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
-
-  // useEffect(() => {
-  //   const html = document.querySelector("html");
-  //   if (html) html.classList.toggle("overflow-hidden", hamburgerMenuIsOpen);
-  // }, [hamburgerMenuIsOpen]);
-
-  // useEffect(() => {
-  //   const closeHamburgerNavigation = () => setHamburgerMenuIsOpen(false);
-  //   window.addEventListener("orientationchange", closeHamburgerNavigation);
-  //   window.addEventListener("resize", closeHamburgerNavigation);
-
-  //   return () => {
-  //     window.removeEventListener("orientationchange", closeHamburgerNavigation);
-  //     window.removeEventListener("resize", closeHamburgerNavigation);
-  //   };
-  // }, [setHamburgerMenuIsOpen]);
-
   return (
-    <>
-      <header className="fixed left-0 top-0 z-50 w-full translate-y-[-1rem] animate-fade-in border-b opacity-0 backdrop-blur-[12px] [--animation-delay:600ms]">
-        <div className="container flex h-[3.5rem] items-center justify-between">
-          <div className="flex items-center gap-x-1">
+    <header className="fixed left-0 top-0 z-50 w-full translate-y-[-1rem] animate-fade-in border-b opacity-0 backdrop-blur-[12px] [--animation-delay:600ms]">
+      <div className="container flex h-[3.5rem] items-center justify-between">
+        {/* Left section: Logo and Coursebite */}
+        <div className="flex items-center gap-x-1">
           <img src="/logo.svg" alt="logo" className="flex item-center" />
           <Link className="text-md flex items-center" href="/">
             Coursebite
           </Link>
-          </div>
+        </div>
 
-          <div className="ml-auto flex h-full items-center">
-            <Link className="mr-6 text-sm" href="/app/login">
+        {/* Right section: Navigation links */}
+        <div className="ml-auto flex h-full items-center gap-x-4">
+          {/* Separate div for "How It Works" */}
+          <div>
+            <Link className="text-sm" href="/how-it-works">
+              How It Works
+            </Link>
+          </div>
+          {/* Separate div for "Courses Offered" */}
+          <div>
+            <Link className="text-sm" href="/courses-offered">
+              Courses Offered
+            </Link>
+          </div>
+          {/* Separate div for "for instructos" */}
+          <div>
+            <Link className="text-sm" href="/for-instructors">
+              For Instructors
+            </Link>
+          </div>
+          {/* Separate div for "Pricing" */}
+          <div>
+            <Link className="text-sm" href="/for-instructors">
+              Pricing
+            </Link>
+          </div>
+           {/* Separate div for "FAQ" */}
+           <div>
+            <Link className="text-sm" href="/faq">
+              FAQ
+            </Link>
+          </div>
+          {/* Grouped div for Log in and Sign up */}
+          <div className="flex items-center gap-x-4">
+            <Link className="text-sm" href="/app/login">
               Log in
             </Link>
             <Link
               className={cn(
                 buttonVariants({ variant: "secondary" }),
-                "mr-6 text-sm"
+                "text-sm"
               )}
               href="/app/login"
             >
               Sign up
             </Link>
           </div>
-          {/* <button
-            className="ml-6 md:hidden"
-            onClick={() => setHamburgerMenuIsOpen((open) => !open)}
-          >
-            <span className="sr-only">Toggle menu</span>
-            {hamburgerMenuIsOpen ? <XIcon /> : <AlignJustify />}
-          </button> */}
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 }

@@ -21,7 +21,6 @@ export default async function Page() {
       {/* <SphereMask /> */}
       <PricingSection />
       <Testimonials/>
-      <FAQSection/>
       <CallToActionSection />
       <Particles
         className="absolute inset-0 -z-10"

@@ -3,6 +3,7 @@ import { Toaster } from "../components/ui/sonner";
 import { cn } from "../lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
+import Link from "next/link"; // Import Next's Link component
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -11,7 +12,8 @@ const fontSans = FontSans({
 });
 export const metadata: Metadata = {
   title: "Coursebite",
-  description: "The first all-in-one Integrated Learning Environment as a Platform",
+  description:
+    "The first all-in-one Integrated Learning Environment as a Platform",
 };
 
 export default function RootLayout({
