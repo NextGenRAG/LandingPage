@@ -25,11 +25,11 @@ const footerNavs = [
     items: [
       {
         href: "/",
-        name: "Discord",
+        name: "LinkedIn",
       },
       {
         href: "/",
-        name: "Twitter",
+        name: "Facebook",
       },
       {
         href: "mailto:support@coursebite.ai",
