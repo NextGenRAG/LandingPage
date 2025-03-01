@@ -8,12 +8,12 @@ export default function privacyPage() {
   return (
     <>
       <SiteHeader />
-      <main className="relative container mx-auto text-center px-4 py-16 max-w-7xl">
-              <h1 className="mx-auto mt-4 max-w-xs text-3xl font-semibold sm:max-w-none sm:text-4xl md:text-5xl">
+      <main className="relative container mx-auto px-4 py-16 max-w-7xl">
+              <h1 className="mx-auto mt-4 max-w-xs text-3xl text-center font-semibold sm:max-w-none sm:text-4xl md:text-5xl">
               Online Privacy Policy
               </h1>
               <br/>
-              <h1>Privacy Policy</h1>
+
               <p>&nbsp;</p>
               <p>
                 This Privacy Policy ("Policy") applies to Coursebite.AI, and CourseBite Education Corporation.

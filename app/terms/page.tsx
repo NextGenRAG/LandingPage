@@ -8,8 +8,8 @@ export default function termsPage() {
   return (
     <>
       <SiteHeader />
-      <main className="relative container mx-auto text-center px-4 py-16 max-w-7xl">
-              <h1 className="mx-auto mt-4 max-w-xs text-3xl font-semibold sm:max-w-none sm:text-4xl md:text-5xl">
+      <main className="relative container mx-auto px-4 py-16 max-w-7xl">
+              <h1 className="mx-auto mt-4 max-w-xs text-center text-3xl font-semibold sm:max-w-none sm:text-4xl md:text-5xl">
               Artificial Intelligence Terms of Use
               </h1>
               <p>&nbsp;</p>
@@ -156,11 +156,11 @@ export default function termsPage() {
               </p>
               <p>&nbsp;</p>
 
-              <h1 className="mx-auto mt-4 max-w-xs text-3xl font-semibold sm:max-w-none sm:text-4xl md:text-5xl">
+              <h1 className="mx-auto mt-4 max-w-xs text-3xl text-center font-semibold sm:max-w-none sm:text-4xl md:text-5xl">
               Website Terms of Use
               </h1>
               <br/>
-              <h1>Terms and Conditions</h1>
+
               <p>&nbsp;</p>
               <h2 className="font-semibold">Agreement between User and Coursebite.AI</h2>
               <p>

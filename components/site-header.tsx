@@ -45,23 +45,23 @@ export function SiteHeader() {
         {/* Right section: Navigation links */}
         <div className="ml-auto flex h-full items-center gap-x-4">
           {/* Separate div for "How It Works" */}
-          <div>
+          {/* <div>
             <Link className="text-sm" href="/how-it-works">
               How It Works
             </Link>
-          </div>
+          </div> */}
           {/* Separate div for "Courses Offered" */}
-          <div>
+          {/* <div>
             <Link className="text-sm" href="/courses-offered">
               Courses Offered
             </Link>
-          </div>
+          </div> */}
           {/* Separate div for "for instructos" */}
-          <div>
+          {/* <div>
             <Link className="text-sm" href="/for-instructors">
               For Instructors
             </Link>
-          </div>
+          </div> */}
           {/* Separate div for "Pricing" */}
           <div>
             <Link className="text-sm" href="/pricing">
