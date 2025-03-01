@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
-import PricingSection from "@/components/landing/pricing-section";
+import { SiteFooter } from "../../components/site-footer";
+import { SiteHeader } from "../../components/site-header";
+import PricingSection from "../../components/landing/pricing-section";
 
 export default function PricingPage() {
   return (

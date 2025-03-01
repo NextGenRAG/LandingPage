@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
+import { SiteFooter } from "../../components/site-footer";
+import { SiteHeader } from "../../components/site-header";
 
 export default function termsPage() {
   return (
