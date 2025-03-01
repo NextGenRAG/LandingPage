@@ -24,12 +24,16 @@ const footerNavs = [
     label: "Community",
     items: [
       {
-        href: "/",
-        name: "Discord",
+        href: "https://www.facebook.com/people/CourseBite/61572449074950/",
+        name: "Facebook",
+        target: "_blank",
+        rel: "noopener noreferrer",
       },
       {
-        href: "/",
-        name: "Twitter",
+        href: "https://www.linkedin.com/company/coursebite-education-corporation/?viewAsMember=false",
+        name: "LinkedIn",
+        target: "_blank",
+        rel: "noopener noreferrer",
       },
       {
         href: "mailto:support@coursebite.ai",
@@ -121,7 +125,7 @@ export function SiteFooter() {
           </div>
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             Copyright © {new Date().getFullYear()}{" "}
-            <Link href="/" className="cursor-pointer">
+            <Link href="/terms" className="cursor-pointer">
               Coursebite Education Corporation
             </Link>
             . All Rights Reserved.

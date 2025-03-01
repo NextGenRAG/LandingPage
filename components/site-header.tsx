@@ -64,7 +64,7 @@ export function SiteHeader() {
           </div>
           {/* Separate div for "Pricing" */}
           <div>
-            <Link className="text-sm" href="/for-instructors">
+            <Link className="text-sm" href="/pricing">
               Pricing
             </Link>
           </div>
