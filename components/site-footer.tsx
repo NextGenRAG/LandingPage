@@ -6,7 +6,7 @@ const footerNavs = [
     label: "Product",
     items: [
       {
-        href: "/",
+        href: "mailto:support@coursebite.ai",
         name: "Email Collection",
       },
       {
