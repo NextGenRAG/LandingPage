@@ -40,13 +40,10 @@ export function SiteHeader() {
   const mobileMenuItems = [
     { id: 1, label: "Pricing", href: "/pricing" },
     { id: 2, label: "FAQ", href: "/faq" },
-    { id: 3, label: "Log in", href: "/app/login" },
-    {
-      id: 4,
-      label: "Sign up",
-      href: "/app/login",
-      isButton: true,
-    },
+    // { id: 3, label: "Courses Offered", href: "/courses-offered" },
+    { id: 4, label: "Log in", href: "/app/login" },
+    { id: 5, label: "Sign up", href: "/app/login",},
+  
   ];
 
   useEffect(() => {
@@ -67,7 +64,7 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="fixed left-0 top-0 z-50 w-full translate-y-[-1rem] animate-fade-in border-b opacity-0 backdrop-blur-[12px] [--animation-delay:600ms]">
+      <header className="fixed left-0 top-0 z-50 w-full translate-y-[-1rem] animate-fade-in border-b opacity-0 backdrop-blur-[12px] [--animation-delay:800ms]">
         <div className="container flex h-[3.5rem] items-center justify-between">
           {/* Left: Logo */}
           <div className="flex items-center gap-x-1">
@@ -84,6 +81,9 @@ export function SiteHeader() {
             <Link className="text-sm" href="/faq">
               FAQ
             </Link>
+            {/* <Link className="text-sm" href="/courses-offered">
+              Courses Offered
+            </Link> */}
             <div className="flex items-center gap-x-4">
               <Link className="text-sm" href="/app/login">
                 Log in
