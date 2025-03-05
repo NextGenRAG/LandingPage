@@ -40,7 +40,7 @@ const timelineEvents: TimelineEvent[] = [
     status: "future",
   },
   {
-    title: "Coming Soon ...",
+    title: "Coming Soon...",
     date: "2029",
     description: "Launching our next-generation product.",
     status: "future",
@@ -49,13 +49,7 @@ const timelineEvents: TimelineEvent[] = [
 
 export function StartupTimeline() {
   return (
-    <section className="py-8 bg-background-150">
-      <MagicCard
-        gradientOpacity={0.6}
-        gradientSize={2600}
-        gradientColor="#cda0df"
-        className="container rounded-2xl mx-auto px-4"
-      >
+    <section id="timeline">
         <div className="container mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold text-primary mb-8 text-center">
             Our Journey & Future Prospects
@@ -65,7 +59,7 @@ export function StartupTimeline() {
           <div className="hidden md:block">
             <div className="relative mb-12">
               {/* Horizontal progress bar */}
-              <div className="absolute top-1/3 left-0 w-full h-1 bg-neutral-600 z-0"></div>
+              <div className="absolute rounded-full top-1/3 left-0 w-full h-1 bg-neutral-600 z-0"></div>
               <div className="flex justify-between items-center relative">
                 {timelineEvents.map((event, index) => (
                   <div key={index} className="flex flex-col items-center">
@@ -139,7 +133,7 @@ export function StartupTimeline() {
           </div>
 
         </div>
-      </MagicCard>
+
     </section>
   );
 }
