@@ -2,7 +2,6 @@
 import React from "react";
 import { SiteHeader } from "../../components/site-header";
 import { SiteFooter } from "../../components/site-footer";
-import { MagicCard } from "../../components/magicui/magic-card";
 import { CourseBento } from "../../components/courses-offered/course-bento";
 export default function CoursesOffered() {
     return (

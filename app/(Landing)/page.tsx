@@ -8,6 +8,7 @@ import Testimonials from "../../components/landing/testimonials";
 import Features from "../../components/landing/features";
 import { WhatIsCoursebite } from "../../components/landing/what-is-coursebite";
 import CallToAction from "../../components/landing/call-to-action";
+import TimelineEvent from "../../components/landing/timeline-section";
 
 export default async function Page() {
   return (
@@ -20,7 +21,7 @@ export default async function Page() {
       <Features />
       <PricingSection />
       <Testimonials/>
-      <CallToActionSection />
+      <TimelineEvent/>
       <Particles
         className="absolute inset-0 -z-10"
         quantity={50}
