@@ -18,7 +18,6 @@ export default async function Page() {
       <WhatIsCoursebite />
       <GetStartedSteps />
       <Features />
-      <PricingSection />
       <Testimonials/>
       <TimelineEvent/>
       <Particles
