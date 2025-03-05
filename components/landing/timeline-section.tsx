@@ -11,7 +11,7 @@ type TimelineEvent = {
 const timelineEvents: TimelineEvent[] = [
   {
     title: "Founded",
-    date: "Sep 2023",
+    date: "Aug 2024",
     description: "Our startup was founded.",
     status: "past",
   },
@@ -49,7 +49,7 @@ const timelineEvents: TimelineEvent[] = [
 
 export function StartupTimeline() {
   return (
-    <section className="py-8 bg-background">
+    <section className="py-8 bg-background-150">
       <MagicCard
         gradientOpacity={0.6}
         gradientSize={2600}
