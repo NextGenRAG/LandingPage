@@ -3,12 +3,7 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 import withMT from "@material-tailwind/react/utils/withMT";
 
 const config = withMT({
-    content: [],
-    theme: {
-      extend: {},
-    },
-    plugins: [],
-  }),
+
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -147,6 +142,6 @@ const config = withMT({
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+}) as Config;
 
 export default config;
