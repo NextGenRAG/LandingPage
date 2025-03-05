@@ -7,6 +7,7 @@ import { CheckIcon } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
 import { Loader } from "lucide-react";
 import { useState } from "react";
+import  Link  from "next/link";
 
 type Interval = "month" | "year";
 
@@ -133,7 +134,7 @@ export default function PricingSection() {
                   <span className="text-xs"> / {interval}</span>
                 </span>
               </motion.div>
-
+              <Link href="https://buy.stripe.com/14k5oh0Bt9hr3te4gz">
               <Button
                 className={cn(
                   "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
@@ -152,6 +153,7 @@ export default function PricingSection() {
                   <Loader className="mr-2 h-4 w-4 animate-spin" />
                 )}
               </Button>
+              </Link>
 
               <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-500/30 to-neutral-200/0" />
               {price.features && price.features.length > 0 && (
