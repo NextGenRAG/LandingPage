@@ -7,7 +7,7 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+import { InteractiveHoverButton } from "../../components/magicui/interactive-hover-button";
 import { CustomHoverButton } from "../magicui/custom-hover-button";
 import { useRouter } from "next/navigation";
 
@@ -16,7 +16,6 @@ export default function HeroSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const router = useRouter();
-  
   return (
     <section
       id="hero"
