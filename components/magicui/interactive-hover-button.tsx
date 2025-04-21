@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 interface InteractiveHoverButtonProps
