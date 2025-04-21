@@ -6,9 +6,7 @@ import { Button } from "../ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { InteractiveHoverButton } from "../../components/magicui/interactive-hover-button";
-import { CustomHoverButton } from "../magicui/custom-hover-button";
 import { useRouter } from "next/navigation";
 
 
