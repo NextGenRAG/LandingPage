@@ -18,7 +18,7 @@ const demoPrices = [
   {
     id: "price_1",
     name: "Essential",
-    description: "A basic plan for startups and individual users",
+    description: "A basic plan students and anyone trying to learn",
     features: [
       "AI-Tutor",
       "Automated Free Response Grading",
@@ -131,7 +131,7 @@ export default function PricingSection() {
                   <span className="text-xs"> / {interval}</span>
                 </span>
               </motion.div>
-              <Link href="https://buy.stripe.com/14k5oh0Bt9hr3te4gz">
+              <Link href="https://coursebite.ai/app/signup">
               <Button
                 className={cn(
                   "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
