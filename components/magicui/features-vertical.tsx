@@ -180,10 +180,10 @@ export default function Features({
   return (
     <section ref={ref} id="features">
       <div className="container">
-        <div className="max-w-6xl mx-auto">
-          <div className="mx-auto my-12 h-full grid lg:grid-cols-2 gap-10 items-center">
+        <div className="max-w-[90rem] mx-auto">
+          <div className="mx-auto my-12 h-full grid lg:grid-cols-2 gap-16 items-start">
             <div
-              className={` hidden lg:flex order-1 lg:order-[0] ${
+              className={`hidden lg:flex order-1 lg:order-[0] ${
                 ltr ? "lg:order-2 lg:justify-end" : "justify-start"
               }`}
             >
@@ -266,7 +266,7 @@ export default function Features({
               </Accordion.Root>
             </div>
             <div
-              className={`h-[350px] min-h-[200px] w-auto  ${
+              className={`h-auto max-h-[550px] w-full lg:w-[800px] flex items-stretch justify-center overflow-hidden rounded-xl border border-neutral-300/50 shadow-lg ${
                 ltr && "lg:order-1"
               }`}
             >
@@ -275,7 +275,7 @@ export default function Features({
                   key={currentIndex}
                   src={data[currentIndex].image}
                   alt="feature"
-                  className="aspect-auto h-full w-full rounded-xl border border-neutral-300/50 object-cover object-left-top p-1 shadow-lg"
+                  className="w-full h-full object-fill"
                   initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}

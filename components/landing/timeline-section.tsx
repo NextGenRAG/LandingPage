@@ -19,7 +19,7 @@ const timelineEvents: TimelineEvent[] = [
     title: "Coursebite Alpha Launch",
     date: "March 2025",
     description: "Released our first Minimum Viable Product.",
-    status: "future",
+    status: "past",
   },
   {
     title: "Coursebite Version 1.0",

@@ -18,7 +18,7 @@ export default function Safari({
     <svg
       width={width}
       height={height}
-      viewBox={`0 0 ${width} ${height}`}
+      viewBox="0 0 1203 753"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
@@ -129,17 +129,16 @@ export default function Safari({
         </g>
         <image
           href={src}
-          width="1200"
-          height="700"
+          width="100%"
+          height="100%"
           x="1"
           y="52"
-          preserveAspectRatio="xMidYMid slice"
-          clipPath="url(#roundedBottom)"
+          preserveAspectRatio="none"
         />
       </g>
       <defs>
         <clipPath id="path0">
-          <rect width={width} height={height} fill="white" />
+          <rect width="1203" height="753" fill="white" />
         </clipPath>
         <clipPath id="roundedBottom">
           <path
