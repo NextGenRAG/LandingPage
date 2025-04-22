@@ -18,7 +18,7 @@ const demoPrices = [
   {
     id: "price_1",
     name: "Essential",
-    description: "A basic plan for startups and individual users",
+    description: "A basic plan for students and educators",
     features: [
       "AI-Tutor",
       "Automated Free Response Grading",
