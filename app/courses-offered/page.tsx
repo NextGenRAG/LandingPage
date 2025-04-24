@@ -57,7 +57,7 @@ export default function CoursesPage() {
     <>
       <SiteHeader />
       <main className="min-h-screen bg-background">
-        <div className="container mx-auto px-4 py-16 max-w-7xl">
+        <div className="container mx-auto px-4 py-25 sm:py-32 max-w-7xl">
           <div className="mb-16 text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
               Courses Offered
