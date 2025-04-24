@@ -40,7 +40,7 @@ export function SiteHeader() {
   const mobileMenuItems = [
     { id: 1, label: "Pricing", href: "/pricing" },
     { id: 2, label: "FAQ", href: "/faq" },
-    // { id: 3, label: "Courses Offered", href: "/courses-offered" },
+    { id: 3, label: "Courses Offered", href: "/courses-offered" },
     { id: 4, label: "Log in", href: "/app/login" },
     { id: 5, label: "Sign up", href: "/app/login",},
   
@@ -81,9 +81,9 @@ export function SiteHeader() {
             <Link className="text-sm" href="/faq">
               FAQ
             </Link>
-            {/* <Link className="text-sm" href="/courses-offered">
-              Courses Offered
-            </Link> */}
+            <Link className="text-sm" href="/courses-offered">
+              Our Courses
+            </Link>
             <div className="flex items-center gap-x-4">
               <Link className="text-sm" href="/app/login">
                 Log in
