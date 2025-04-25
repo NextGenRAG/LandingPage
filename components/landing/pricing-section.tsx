@@ -18,7 +18,7 @@ const demoPrices = [
   {
     id: "price_1",
     name: "Essential",
-    description: "A basic plan for students and educators",
+    description: "A basic plan for startups and individual users",
     features: [
       "AI-Tutor",
       "Automated Free Response Grading",
@@ -44,10 +44,7 @@ export default function PricingSection() {
   const [id, setId] = useState<string | null>(null);
 
   const onSubscribeClick = async (priceId: string) => {
-    setIsLoading(true);
-    setId(priceId);
-    await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate a delay
-    setIsLoading(false);
+    window.location.href = '/app/signup';
   };
 
   return (
