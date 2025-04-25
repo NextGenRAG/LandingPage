@@ -17,7 +17,7 @@ import {
     {
       question: "Do you offer any discounts?",
       answer:
-        "We offer a free trial and many diffrent promo codes if you sign up for our newsletter or recived a referal.",
+        "We offer a free trial and several different promo codes if you sign up for our newsletter or receive a referral.",
     },
     {
       question: "How do I cancel my subscription?",
