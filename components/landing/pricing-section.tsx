@@ -32,8 +32,8 @@ const demoPrices = [
       "Verified-Instructor Courses",
       "End-to-End Organization"
     ],
-    monthlyPrice: 1500,
-    yearlyPrice: 15000,
+    monthlyPrice: 1999,
+    yearlyPrice: 19999,
     isMostPopular: false,
   },
 ];
