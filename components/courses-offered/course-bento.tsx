@@ -42,7 +42,7 @@ export function CourseBento() {
   }, []);
 
   if (loading) {
-    return (
+  return (
       <div className="w-full py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <p className="text-center mb-4">Loading courses...</p>
