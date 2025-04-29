@@ -9,10 +9,25 @@ const features = [
     description:
       "Like your private tutor, it guides you through each concept step-by-step—making it virtually impossible to zone out or fall behind. With intelligent content delivery, dynamic feedback, and bite-sized lessons built from proprietary knowledge graphs, Coursebite transforms studying into an engaging, adaptive experience designed to ensure true understanding at every turn.",
     content: (
-      <div className="flex flex-col gap-4 md:flex-row md:gap-6 justify-center items-center mt-6">
-        <div className="w-40 h-32 bg-gradient-to-br from-purple-300 via-purple-100 to-blue-200 flex items-center justify-center rounded-lg text-neutral-700 text-sm font-medium shadow">Image 1</div>
-        <div className="w-40 h-32 bg-gradient-to-br from-blue-200 via-white to-pink-200 flex items-center justify-center rounded-lg text-neutral-700 text-sm font-medium shadow">Image 2</div>
-        <div className="w-40 h-32 bg-gradient-to-br from-pink-200 via-pink-100 to-purple-200 flex items-center justify-center rounded-lg text-neutral-700 text-sm font-medium shadow">Image 3</div>
+      <div className="flex flex-col gap-4 md:flex-row md:gap-12 justify-center items-center mt-6 overflow-x-auto max-w-full">
+        <div className="flex flex-col items-center gap-3 min-w-0">
+          <h4 className="font-medium text-primary">Study</h4>
+          <div className="w-[32rem] max-w-full flex items-center justify-center">
+            <img src="/study.png" alt="Study" className="h-96 w-auto object-contain rounded" />
+          </div>
+        </div>
+        <div className="flex flex-col items-center gap-3 min-w-0">
+          <h4 className="font-medium text-primary">Practice</h4>
+          <div className="w-[32rem] max-w-full flex items-center justify-center">
+            <img src="/practice.png" alt="Practice" className="h-96 w-auto object-contain rounded" />
+          </div>
+        </div>
+        <div className="flex flex-col items-center gap-3 min-w-0">
+          <h4 className="font-medium text-primary">Reinforce</h4>
+          <div className="w-[32rem] max-w-full flex items-center justify-center">
+            <img src="/reinforce.png" alt="Reinforce" className="h-96 w-auto object-contain rounded" />
+          </div>
+        </div>
       </div>
     ),
     cardClass: "bg-gradient-to-br from-purple-50 via-white to-blue-50 border-2 border-purple-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 dark:border-neutral-700",
@@ -20,18 +35,30 @@ const features = [
   {
     title: "Stay Organized Seamlessly",
     description:
-      "[Placeholder] Keep all your modules, notes, and resources organized in one place. Effortlessly manage your study schedule and never lose track of your progress.",
+      "Keep all your modules, notes, and resources organized in one place. Effortlessly manage your study schedule and never lose track of your progress.",
     content: (
-      <div className="w-full h-32 bg-gradient-to-br from-blue-100 via-white to-purple-100 flex items-center justify-center rounded-lg text-neutral-700 text-sm font-medium shadow mt-6">Modules/Organization Image</div>
+      <div className="flex justify-center w-full mt-6">
+        <img
+          src="/Modules.png"
+          alt="Organization"
+          className="h-96 w-auto object-contain rounded"
+        />
+      </div>
     ),
     cardClass: "bg-gradient-to-br from-blue-50 via-white to-purple-50 border-2 border-blue-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 dark:border-neutral-700",
   },
   {
     title: "Measure Your Real-Time Understanding",
     description:
-      "[Placeholder] Use comprehensive quizzes and assessments to gauge your understanding of key concepts, track your progress, and get real-time feedback.",
+      "Use comprehensive quizzes and assessments to gauge your understanding of key concepts, track your progress, and get real-time feedback.",
     content: (
-      <div className="w-full h-32 bg-gradient-to-br from-pink-100 via-white to-purple-100 flex items-center justify-center rounded-lg text-neutral-700 text-sm font-medium shadow mt-6">Gradebook/Assessment Image</div>
+      <div className="flex justify-center w-full mt-6">
+        <img
+          src="/gradebook.png"
+          alt="Gradebook showing detailed course progress"
+          className="h-96 w-auto object-contain rounded"
+        />
+      </div>
     ),
     cardClass: "bg-gradient-to-br from-pink-50 via-white to-purple-50 border-2 border-pink-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 dark:border-neutral-700",
   },
@@ -49,7 +76,7 @@ export default function Component() {
         {/* Learn Feature - full width */}
         <div
           className={cn(
-            "relative items-start overflow-hidden p-10 rounded-2xl shadow-md",
+            "relative items-start overflow-hidden p-10 rounded-2xl",
             features[0].cardClass
           )}
         >
@@ -61,11 +88,7 @@ export default function Component() {
               {features[0].description}
             </p>
           </div>
-          <div className="flex flex-col gap-6 md:flex-row md:gap-8 justify-center items-center">
-            <div className="w-80 h-64 bg-gradient-to-br from-purple-300 via-purple-100 to-blue-200 flex items-center justify-center rounded-lg text-neutral-700 text-sm font-medium shadow">Image 1</div>
-            <div className="w-80 h-64 bg-gradient-to-br from-blue-200 via-white to-pink-200 flex items-center justify-center rounded-lg text-neutral-700 text-sm font-medium shadow">Image 2</div>
-            <div className="w-80 h-64 bg-gradient-to-br from-pink-200 via-pink-100 to-purple-200 flex items-center justify-center rounded-lg text-neutral-700 text-sm font-medium shadow">Image 3</div>
-          </div>
+          {features[0].content}
         </div>
         {/* Bottom two features in a grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -73,7 +96,7 @@ export default function Component() {
             <div
               key={index}
               className={cn(
-                "relative items-start overflow-hidden p-8 rounded-2xl shadow-md",
+                "relative items-start overflow-hidden p-8 rounded-2xl",
                 feature.cardClass
               )}
             >
@@ -85,9 +108,7 @@ export default function Component() {
                   {feature.description}
                 </p>
               </div>
-              <div className="w-full h-48 bg-gradient-to-br from-blue-100 via-white to-purple-100 flex items-center justify-center rounded-lg text-neutral-700 text-sm font-medium shadow mt-6">
-                {index === 0 ? "Modules/Organization Image" : "Gradebook/Assessment Image"}
-              </div>
+              {feature.content}
             </div>
           ))}
         </div>
