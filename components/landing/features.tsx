@@ -1,84 +1,66 @@
 "use client";
 
-import FlickeringGrid from "../magicui/flickering-grid";
-import Ripple from "../magicui/ripple";
-import Safari from "../magicui/safari";
 import Section from "../ui/section";
 import { cn } from "../../lib/utils";
-import { motion } from "framer-motion";
 
 const features = [
   {
-    title: "Review Your Course Material",
+    title: "Learn",
     description:
-      "Use our curated study guides and resources to reinforce your learning and improve your understanding of complex concepts.",
-    className: "hover:bg-purple-500/10 transition-all duration-500 ease-out",
+      "Like your private tutor, it guides you through each concept step-by-step—making it virtually impossible to zone out or fall behind. With intelligent content delivery, dynamic feedback, and bite-sized lessons built from proprietary knowledge graphs, Coursebite transforms studying into an engaging, adaptive experience designed to ensure true understanding at every turn.",
     content: (
-      <>
-        <Safari
-          src={`/review.png`}
-          url="https://acme.ai"
-          className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(75,0,130,0.5)] group-hover:translate-y-[-10px] transition-all duration-300"
-        />
-      </>
+      <div className="flex flex-col gap-4 md:flex-row md:gap-12 justify-center items-center mt-6 overflow-x-auto max-w-full">
+        <div className="flex flex-col items-center gap-3 min-w-0">
+          <h4 className="font-medium text-primary">Study</h4>
+          <div className="w-[32rem] max-w-full flex items-center justify-center">
+            <img src="/study.png" alt="Study" className="h-96 w-auto object-contain rounded" />
+          </div>
+        </div>
+        <div className="flex flex-col items-center gap-3 min-w-0">
+          <h4 className="font-medium text-primary">Practice</h4>
+          <div className="w-[32rem] max-w-full flex items-center justify-center">
+            <img src="/practice.png" alt="Practice" className="h-96 w-auto object-contain rounded" />
+          </div>
+        </div>
+        <div className="flex flex-col items-center gap-3 min-w-0">
+          <h4 className="font-medium text-primary">Reinforce</h4>
+          <div className="w-[32rem] max-w-full flex items-center justify-center">
+            <img src="/reinforce.png" alt="Reinforce" className="h-96 w-auto object-contain rounded" />
+          </div>
+        </div>
+      </div>
     ),
+    cardClass: "bg-gradient-to-br from-purple-50 via-white to-blue-50 border-2 border-purple-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 dark:border-neutral-700",
   },
   {
-    title: "Reinforce Your Learning",
+    title: "Stay Organized Seamlessly",
     description:
-      "Utilize active recall and spaced repetition techniques to improve your memory retention and recall of key concepts.",
-    className:
-      "order-3 xl:order-none hover:bg-blue-500/10 transition-all duration-500 ease-out",
+      "Keep all your modules, notes, and resources organized in one place. Effortlessly manage your study schedule and never lose track of your progress.",
     content: (
-      <Safari
-        src={`/flashcards.png`}
-        url="https://acme.ai"
-        className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(75,100,140,0.5)] group-hover:translate-y-[-10px] transition-all duration-300"
-      />
+      <div className="flex justify-center w-full mt-6">
+        <img
+          src="/Modules.png"
+          alt="Organization"
+          className="h-96 w-auto object-contain rounded"
+        />
+      </div>
     ),
+    cardClass: "bg-gradient-to-br from-blue-50 via-white to-purple-50 border-2 border-blue-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 dark:border-neutral-700",
   },
   {
-    title: "Get On-Demand Tutoring",
+    title: "Measure Your Real-Time Understanding",
     description:
-      "Chat with our personalized AI tutors to get instant feedback and guidance on your study material.",
-    className:
-      "md:row-span-2 hover:bg-purple-500/10 transition-all duration-500 ease-out",
+      "Use comprehensive quizzes and assessments to gauge your understanding of key concepts, track your progress, and get real-time feedback.",
     content: (
-      <>
-        <FlickeringGrid
-          className="z-0 absolute inset-0 [mask:radial-gradient(circle_at_center,#fff_400px,transparent_0)]"
-          squareSize={4}
-          gridGap={6}
-          color="#4B0082"
-          maxOpacity={0.1}
-          flickerChance={0.1}
-          height={800}
-          width={800}
+      <div className="flex justify-center w-full mt-6">
+        <img
+          src="/gradebook.png"
+          alt="Gradebook showing detailed course progress"
+          className="h-96 w-auto object-contain rounded"
         />
-        <Safari
-          src={`/chat.png`}
-          url="https://acme.ai"
-          className="-mb-48 ml-12 mt-16 h-full px-4 select-none drop-shadow-[0_0_28px_rgba(75,0,130,0.5)] group-hover:translate-x-[-10px] transition-all duration-300"
-        />
-      </>
+      </div>
     ),
-  },
-  {
-    title: "Measure Your Realtime Understanding",
-    description:
-      "Use our comprehensive quizzes and assessments to gauge your understanding of key concepts, track your progress, and get realtime feedback.",
-    className:
-      "flex-row order-4 md:col-span-2 md:flex-row xl:order-none hover:bg-green-500/10 transition-all duration-500 ease-out",
-    content: (
-      <>
-        <Ripple className="absolute -bottom-full" />
-        <Safari
-          src={`/understanding.png`}
-          url="https://acme.ai"
-          className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(50,205,50,0.5)] group-hover:translate-y-[-10px] transition-all duration-300"
-        />
-      </>
-    ),
+    cardClass: "bg-gradient-to-br from-pink-50 via-white to-purple-50 border-2 border-pink-200 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 dark:border-neutral-700",
   },
 ];
 
@@ -90,35 +72,46 @@ export default function Component() {
       description="Our platform is designed to help you succeed in your studies by providing you with the tools you need to learn faster and more effectively."
       className="bg-neutral-100 dark:bg-neutral-900"
     >
-      <div className="mx-auto mt-16 grid max-w-sm grid-cols-1 gap-6 text-gray-500 md:max-w-3xl md:grid-cols-2 xl:grid-rows-2 md:grid-rows-3 xl:max-w-6xl xl:auto-rows-fr xl:grid-cols-3">
-        {features.map((feature, index) => (
-          <motion.div
-            key={index}
-            className={cn(
-              "group relative items-start overflow-hidden bg-neutral-50 dark:bg-neutral-800 p-6 rounded-2xl",
-              feature.className
-            )}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.5,
-              type: "spring",
-              stiffness: 100,
-              damping: 30,
-              delay: index * 0.1,
-            }}
-            viewport={{ once: true }}
-          >
-            <div>
-              <h3 className="font-semibold mb-2 text-primary">
-                {feature.title}
-              </h3>
-              <p className="text-foreground">{feature.description}</p>
+      <div className="mx-auto mt-16 flex flex-col gap-8 max-w-7xl">
+        {/* Learn Feature - full width */}
+        <div
+          className={cn(
+            "relative items-start overflow-hidden p-10 rounded-2xl",
+            features[0].cardClass
+          )}
+        >
+          <div className="max-w-4xl mx-auto">
+            <h3 className="font-semibold mb-2 text-primary text-2xl text-center">
+              {features[0].title}
+            </h3>
+            <p className="text-foreground text-center mb-6 text-sm">
+              {features[0].description}
+            </p>
+          </div>
+          {features[0].content}
+        </div>
+        {/* Bottom two features in a grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {features.slice(1).map((feature, index) => (
+            <div
+              key={index}
+              className={cn(
+                "relative items-start overflow-hidden p-8 rounded-2xl",
+                feature.cardClass
+              )}
+            >
+              <div>
+                <h3 className="font-semibold mb-2 text-primary text-xl text-center">
+                  {feature.title}
+                </h3>
+                <p className="text-foreground text-center mb-4 text-sm">
+                  {feature.description}
+                </p>
+              </div>
+              {feature.content}
             </div>
-            {feature.content}
-            <div className="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-neutral-50 dark:from-neutral-900 pointer-events-none"></div>
-          </motion.div>
-        ))}
+          ))}
+        </div>
       </div>
     </Section>
   );

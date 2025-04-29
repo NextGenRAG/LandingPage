@@ -181,14 +181,14 @@ export default function Features({
     <section ref={ref} id="features">
       <div className="container">
         <div className="max-w-[90rem] mx-auto">
-          <div className="mx-auto my-12 h-full grid lg:grid-cols-2 gap-16 items-start">
+          <div className="mx-auto my-12 h-full grid lg:grid-cols-[40%_60%] gap-16 items-start">
             <div
               className={`hidden lg:flex order-1 lg:order-[0] ${
                 ltr ? "lg:order-2 lg:justify-end" : "justify-start"
               }`}
             >
               <Accordion.Root
-                className=""
+                className="w-full max-w-full"
                 type="single"
                 defaultValue={`item-${currentIndex}`}
                 value={`item-${currentIndex}`}
@@ -256,7 +256,7 @@ export default function Features({
                           {item.title}
                         </AccordionTrigger>
 
-                        <AccordionTrigger className="justify-start text-left leading-4 text-[16px] pl-0">
+                        <AccordionTrigger className="justify-start text-left leading-4 text-[13px] pl-0 text-neutral-600 dark:text-neutral-400">
                           {item.content}
                         </AccordionTrigger>
                       </div>
@@ -266,7 +266,7 @@ export default function Features({
               </Accordion.Root>
             </div>
             <div
-              className={`h-auto max-h-[550px] w-full lg:w-[800px] flex items-stretch justify-center overflow-hidden rounded-xl border border-neutral-300/50 shadow-lg ${
+              className={`relative h-auto w-full flex items-stretch justify-center overflow-hidden rounded-xl border border-neutral-300/50 shadow-lg ${
                 ltr && "lg:order-1"
               }`}
             >
@@ -275,7 +275,7 @@ export default function Features({
                   key={currentIndex}
                   src={data[currentIndex].image}
                   alt="feature"
-                  className="w-full h-full object-fill"
+                  className="w-full h-auto max-h-[600px] object-contain py-4 px-4"
                   initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
@@ -285,13 +285,13 @@ export default function Features({
                 <video
                   preload="auto"
                   src={data[currentIndex].video}
-                  className="aspect-auto h-full w-full rounded-lg object-cover shadow-lg"
+                  className="w-full h-auto max-h-[600px] rounded-lg object-cover shadow-lg"
                   autoPlay
                   loop
                   muted
                 />
               ) : (
-                <div className="aspect-auto h-full w-full rounded-xl border border-neutral-300/50 bg-gray-200 p-1"></div>
+                <div className="w-full h-auto aspect-video rounded-xl border border-neutral-300/50 bg-gray-200 p-1"></div>
               )}
             </div>
 
@@ -323,7 +323,7 @@ export default function Features({
                     ></div>
                   </div>
                   <h2 className="text-xl font-bold">{item.title}</h2>
-                  <p className="mx-0 max-w-sm text-balance text-sm">
+                  <p className="mx-0 max-w-sm text-balance text-[13px] text-neutral-600 dark:text-neutral-400">
                     {item.content}
                   </p>
                 </div>
