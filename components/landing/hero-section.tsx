@@ -16,14 +16,14 @@ export default function HeroSection() {
   const router = useRouter();
 
   const handleCopyPromoCode = () => {
-    navigator.clipboard.writeText("WELCOME50");
+    navigator.clipboard.writeText("DITCHCHEGG");
   };
 
   return (
     <>
       <PromoBanner
-        promoCode="WELCOME50"
-        expiryDate="December 31, 2024"
+        promoCode="DITCHCHEGG"
+        expiryDate="May 31, 2025"
         onClick={handleCopyPromoCode}
       />
       <section
