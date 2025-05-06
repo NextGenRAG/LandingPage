@@ -48,7 +48,7 @@ export function PromoBanner({
           </button>
           <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 pr-10 sm:pr-0">
             <TextShimmer className="inline-flex items-center justify-center text-sm sm:text-base font-medium">
-              <span>🎉 Limited Time Offer</span>
+              <span>🎉 50% off for 3 months</span>
             </TextShimmer>
             <div className="flex items-center gap-2">
               <span className="text-sm sm:text-base font-medium">
@@ -62,11 +62,6 @@ export function PromoBanner({
                 <ArrowRightIcon className="size-3" />
               </button>
             </div>
-            {expiryDate && (
-              <p className="text-xs sm:text-sm text-gray-400">
-                Offer expires {expiryDate}
-              </p>
-            )}
           </div>
         </div>
       </div>
