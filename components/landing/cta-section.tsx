@@ -124,7 +124,11 @@ export default function CallToActionSection() {
   }, []);
 
   return (
-    <section id="cta" className="relative py-16">
+    <section id="cta" className="relative py-16 pb-24 mb-8">
+      {/* Background gradient decorations */}
+      <div className="absolute -top-40 -left-40 w-96 h-96 bg-purple-500/20 dark:bg-purple-500/25 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-pink-500/20 dark:bg-pink-500/25 rounded-full blur-3xl"></div>
+      
       <div className="py-14 relative z-10">
         <div className="flex w-full flex-col items-center justify-center">
           <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
@@ -197,7 +201,8 @@ export default function CallToActionSection() {
               </div>
               <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 dark:from-purple-500/30 dark:to-pink-500/30 opacity-40 blur-xl" />
             </div>
-            <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent to-white to-70% dark:to-gray-950" />
+            {/* Modified gradient fade to blend with footer */}
+            <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent via-white/50 to-white dark:via-gray-950/50 dark:to-gray-950"></div>
           </div>
         </div>
       </div>

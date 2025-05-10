@@ -306,8 +306,8 @@ export default function Testimonials() {
             ))}
         </div>
         
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 w-full bg-gradient-to-t from-white dark:from-gray-950 from-20%"></div>
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 w-full bg-gradient-to-b from-white dark:from-gray-950 from-20%"></div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 w-full bg-gradient-to-t from-white/90 via-white/50 to-transparent dark:from-gray-950/90 dark:via-gray-950/50 dark:to-transparent"></div>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 w-full bg-gradient-to-b from-white/90 via-white/50 to-transparent dark:from-gray-950/90 dark:via-gray-950/50 dark:to-transparent"></div>
       </div>
     </Section>
   );

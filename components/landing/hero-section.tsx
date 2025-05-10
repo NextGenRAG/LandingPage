@@ -102,12 +102,10 @@ export default function HeroSection() {
             className="relative mt-[8rem] animate-fade-up opacity-0 [--animation-delay:400ms] [perspective:2000px]"
           >
             <div
-              className={`rounded-xl border border-white/10 bg-white/5 dark:bg-black/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-xl ${
-                inView ? "before:animate-image-glow" : ""
-              }`}
+              className="rounded-xl border border-white/10 bg-white/5 dark:bg-black/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-xl"
             >
-              {/* Custom beam effect that spreads across the entire border */}
-              <div className="absolute inset-0 z-0 rounded-xl bg-gradient-to-r from-purple-500/20 via-transparent to-pink-500/20 opacity-0 animate-pulse [animation-duration:3s]" />
+              {/* Full-width gradient effect that appears on hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-transparent to-pink-500/10 opacity-0 hover:opacity-100 transition-opacity duration-500 z-10"></div>
               
               <VideoBackground />
             </div>
