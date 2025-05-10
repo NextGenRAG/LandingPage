@@ -51,7 +51,7 @@
   }
 
   .dark {
-    --background: 0 0% 0%;
+    --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
 
     --card: 0 0% 3.9%;
@@ -78,7 +78,13 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
+    
+    /* Custom properties */
+    --color-one: #d865ff;
+    --color-two: #fe8bbb;
+    --color-three: #9e7aff;
   }
+  
   .theme {
     --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
     --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;

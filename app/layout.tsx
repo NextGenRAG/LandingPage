@@ -1,4 +1,5 @@
 import { ThemeProvider } from "../components/theme-provider";
+import { ThemeSystemSync } from "../components/theme-system-sync";
 import { Toaster } from "../components/ui/sonner";
 import { cn } from "../lib/utils";
 import type { Metadata } from "next";
@@ -25,7 +26,24 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* 2) Place your Google Tag Manager / Analytics scripts in <head> */}
+        {/* Theme initialization to avoid FOUC (Flash of Unstyled Content) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              const storedTheme = localStorage.getItem('theme');
+              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              
+              const theme = 
+                storedTheme === 'dark' || (storedTheme === null && prefersDark)
+                  ? 'dark'
+                  : '';
+              
+              document.documentElement.classList.add(theme);
+            `,
+          }}
+        />
+        
+        {/* Google Tag Manager / Analytics scripts */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2CV05MT5MY"
           strategy="afterInteractive"
@@ -47,9 +65,11 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="system"
+          enableSystem
           disableTransitionOnChange
         >
+          <ThemeSystemSync />
           {children}
           <Toaster />
         </ThemeProvider>

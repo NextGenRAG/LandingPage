@@ -17,7 +17,7 @@ export const Highlight = ({
   return (
     <span
       className={cn(
-        "bg-primary/20 p-1 py-0.5 font-bold text-primary dark:bg-primary/20 dark:text-primary",
+        "bg-purple-500/10 dark:bg-purple-500/20 p-1 py-0.5 font-bold text-purple-700 dark:text-purple-400",
         className
       )}
     >
@@ -45,16 +45,16 @@ export const TestimonialCard = ({
 }: TestimonialCardProps) => (
   <div
     className={cn(
-      "mb-4 flex w-full cursor-pointer break-inside-avoid flex-col items-center justify-between gap-6 rounded-xl p-4",
+      "mb-4 flex w-full cursor-pointer break-inside-avoid flex-col items-center justify-between gap-6 rounded-xl p-6",
       // light styles
-      " border border-neutral-200 bg-white",
+      "backdrop-blur-sm bg-white/80 border-gray-100 border shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1",
       // dark styles
-      "dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
+      "dark:bg-gray-900/80 dark:border-gray-800",
       className
     )}
     {...props} // Spread the rest of the props here
   >
-    <div className="select-none text-sm font-normal text-neutral-700 dark:text-neutral-400">
+    <div className="select-none text-sm font-normal text-gray-700 dark:text-gray-300">
       {description}
       <div className="flex flex-row py-1">
         <Star className="size-4 text-yellow-500 fill-yellow-500" />
@@ -71,12 +71,12 @@ export const TestimonialCard = ({
         height={40}
         src={img || ""}
         alt={name}
-        className="h-10 w-10 rounded-full ring-1 ring-border ring-offset-4"
+        className="h-10 w-10 rounded-full ring-1 ring-purple-300 dark:ring-purple-700 ring-offset-2 transition-all duration-300 hover:scale-110"
       />
 
       <div>
-        <p className="font-medium text-neutral-500">{name}</p>
-        <p className="text-xs font-normal text-neutral-400">{role}</p>
+        <p className="font-medium bg-gradient-to-r from-purple-700 to-pink-700 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">{name}</p>
+        <p className="text-xs font-normal text-gray-600 dark:text-gray-400">{role}</p>
       </div>
     </div>
   </div>
@@ -107,7 +107,7 @@ const testimonials = [
         <Highlight>
           Adaptive lessons and real-time feedback keep me on track with my studies.
         </Highlight>{" "}
-        It’s an essential tool for any dedicated learner.
+        It's an essential tool for any dedicated learner.
       </p>
     ),
   },
@@ -121,7 +121,7 @@ const testimonials = [
         <Highlight>
           Collaborative tools and resource integration have boosted my performance.
         </Highlight>{" "}
-        It’s an innovative platform for student success.
+        It's an innovative platform for student success.
       </p>
     ),
   },
@@ -149,7 +149,7 @@ const testimonials = [
         <Highlight>
           Its intelligent recommendations have made mastering complex topics simpler.
         </Highlight>{" "}
-        I’m more confident in my studies than ever.
+        I'm more confident in my studies than ever.
       </p>
     ),
   },
@@ -163,7 +163,7 @@ const testimonials = [
         <Highlight>
           Seamless access to diverse learning materials has enriched my academic life.
         </Highlight>{" "}
-        It’s a must-have platform for every student.
+        It's a must-have platform for every student.
       </p>
     ),
   },
@@ -191,7 +191,7 @@ const testimonials = [
         <Highlight>
           Personalized learning paths and interactive feedback have boosted my confidence.
         </Highlight>{" "}
-        It’s a revolutionary platform for modern learners.
+        It's a revolutionary platform for modern learners.
       </p>
     ),
   },
@@ -203,9 +203,9 @@ const testimonials = [
       <p>
         #Coursebite has transformed my academic routine with its user-friendly design.
         <Highlight>
-          The platform’s innovative features facilitate effective collaboration and learning.
+          The platform's innovative features facilitate effective collaboration and learning.
         </Highlight>{" "}
-        It’s a vital tool in my educational journey.
+        It's a vital tool in my educational journey.
       </p>
     ),
   },
@@ -219,7 +219,7 @@ const testimonials = [
         <Highlight>
           The integration of multimedia resources and interactive assessments enhances my understanding.
         </Highlight>{" "}
-        It’s an indispensable part of my academic life.
+        It's an indispensable part of my academic life.
       </p>
     ),
   },
@@ -233,7 +233,7 @@ const testimonials = [
         <Highlight>
           Its smart assessments and feedback mechanisms keep me challenged and motivated.
         </Highlight>{" "}
-        It’s a transformative tool for mastering new concepts.
+        It's a transformative tool for mastering new concepts.
       </p>
     ),
   },
@@ -247,7 +247,7 @@ const testimonials = [
         <Highlight>
           On-demand tutorials and interactive study sessions have redefined my learning experience.
         </Highlight>{" "}
-        It’s flexible and effective for today’s student.
+        It's flexible and effective for today's student.
       </p>
     ),
   },
@@ -261,21 +261,20 @@ const testimonials = [
         <Highlight>
           The blend of collaborative features and rich content makes studying dynamic.
         </Highlight>{" "}
-        It’s an essential resource for academic excellence.
+        It's an essential resource for academic excellence.
       </p>
     ),
   },
 ];
-
 
 export default function Testimonials() {
   return (
     <Section
       title="Testimonials"
       subtitle="What our customers are saying"
-      className="max-w-8xl"
+      className="max-w-8xl relative py-16"
     >
-      <div className="relative mt-6 max-h-screen overflow-hidden">
+      <div className="relative mt-6 max-h-screen overflow-hidden z-10">
         <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4">
           {Array(Math.ceil(testimonials.length / 3))
             .fill(0)
@@ -306,8 +305,9 @@ export default function Testimonials() {
               </Marquee>
             ))}
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 w-full bg-gradient-to-t from-background from-20%"></div>
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 w-full bg-gradient-to-b from-background from-20%"></div>
+        
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 w-full bg-gradient-to-t from-white dark:from-gray-950 from-20%"></div>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 w-full bg-gradient-to-b from-white dark:from-gray-950 from-20%"></div>
       </div>
     </Section>
   );

@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { AlignJustify, XIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "./theme-toggle"
 
 export function SiteHeader() {
   const mobilenavbarVariant = {
@@ -42,8 +43,7 @@ export function SiteHeader() {
     { id: 2, label: "FAQ", href: "/faq" },
     { id: 3, label: "Courses Offered", href: "/courses-offered" },
     { id: 4, label: "Log in", href: "/app/login" },
-    { id: 5, label: "Sign up", href: "/app/login",},
-  
+    { id: 5, label: "Sign up", href: "/app/login" },
   ];
 
   useEffect(() => {
@@ -84,6 +84,7 @@ export function SiteHeader() {
             <Link className="text-sm" href="/courses-offered">
               Our Courses
             </Link>
+            <ThemeToggle />
             <div className="flex items-center gap-x-4">
               <Link className="text-sm" href="/app/login">
                 Log in
@@ -122,13 +123,16 @@ export function SiteHeader() {
             <Link className="text-md flex items-center" href="/">
               Coursebite
             </Link>
-            <button
-              className="ml-6 md:hidden"
-              onClick={() => setHamburgerMenuIsOpen((open) => !open)}
-            >
-              <span className="sr-only">Toggle menu</span>
-              {hamburgerMenuIsOpen ? <XIcon /> : <AlignJustify />}
-            </button>
+            <div className="flex items-center gap-x-2">
+              <ThemeToggle />
+              <button
+                className="ml-2 md:hidden"
+                onClick={() => setHamburgerMenuIsOpen((open) => !open)}
+              >
+                <span className="sr-only">Toggle menu</span>
+                {hamburgerMenuIsOpen ? <XIcon /> : <AlignJustify />}
+              </button>
+            </div>
           </div>
           <motion.ul
             className="flex flex-col md:flex-row md:items-center md:normal-case ease-in"
