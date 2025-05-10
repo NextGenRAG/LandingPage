@@ -5,10 +5,53 @@ import TextShimmer from "../magicui/text-shimmer";
 import { Button } from "../ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { InteractiveHoverButton } from "../../components/magicui/interactive-hover-button";
 import { useRouter } from "next/navigation";
 import { PromoBanner } from "../magicui/promo-banner";
+
+const VideoBackground = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  
+  // Only start loading and playing the video when it's in view
+  useEffect(() => {
+    if (!videoRef.current) return;
+    
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          videoRef.current?.play().catch(error => {
+            console.warn("Video autoplay failed:", error);
+          });
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    observer.observe(videoRef.current);
+    
+    return () => {
+      if (videoRef.current) observer.disconnect();
+    };
+  }, []);
+  
+  return (
+    <video
+      ref={videoRef}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="none"
+      poster="/hero-light.png"
+      className="relative w-full h-full rounded-[inherit] border object-cover"
+      style={{ width: "100%", height: "100%" }}
+    >
+      <source src="/hero-vid.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+  );
+};
 
 export default function HeroSection() {
   const ref = useRef(null);
@@ -58,7 +101,7 @@ export default function HeroSection() {
           className="relative mt-[8rem] animate-fade-up opacity-0 [--animation-delay:400ms] [perspective:2000px] after:absolute after:inset-0 after:z-50 after:[background:linear-gradient(to_top,hsl(var(--background))_30%,transparent)]"
         >
           <div
-            className={`rounded-xl border border-white/10 bg-white bg-opacity-[0.01] before:absolute before:bottom-1/2 before:left-0 before:top-0 before:h-full before:w-full before:opacity-0 before:[filter:blur(180px)] before:[background-image:linear-gradient(to_bottom,var(--color-one),var(--color-one),transparent_40%)] ${
+            className={`rounded-xl border border-white/10 bg-[#fdfdfd] dark:bg-[#fdfdfd] bg-opacity-[0.01] before:absolute before:bottom-1/2 before:left-0 before:top-0 before:h-full before:w-full before:opacity-0 before:[filter:blur(180px)] before:[background-image:linear-gradient(to_bottom,var(--color-one),var(--color-one),transparent_40%)] ${
               inView ? "before:animate-image-glow" : ""
             }`}
           >
@@ -70,16 +113,7 @@ export default function HeroSection() {
               colorTo="var(--color-two)"
             />
 
-            <img
-              src="/hero-dark.png"
-              alt="Hero Image"
-              className="hidden relative w-full h-full rounded-[inherit] border object-contain dark:block"
-            />
-            <img
-              src="/hero-light.png"
-              alt="Hero Image"
-              className="block relative w-full h-full  rounded-[inherit] border object-contain dark:hidden"
-            />
+            <VideoBackground />
           </div>
         </div>
       </section>
