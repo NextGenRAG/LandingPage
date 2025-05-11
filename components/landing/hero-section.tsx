@@ -5,13 +5,14 @@ import TextShimmer from "../magicui/text-shimmer";
 import { Button } from "../ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { InteractiveHoverButton } from "../../components/magicui/interactive-hover-button";
 import { useRouter } from "next/navigation";
 import { PromoBanner } from "../magicui/promo-banner";
 
 const VideoBackground = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
   
   // Only start loading and playing the video when it's in view
   useEffect(() => {
@@ -20,12 +21,20 @@ const VideoBackground = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          videoRef.current?.play().catch(error => {
-            console.warn("Video autoplay failed:", error);
-          });
+          setIsVisible(true);
+          
+          // Add a small delay before loading the video to improve perceived performance
+          setTimeout(() => {
+            if (videoRef.current) {
+              videoRef.current.load();
+              videoRef.current.play().catch(error => {
+                console.warn("Video autoplay failed:", error);
+              });
+            }
+          }, 300);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: "200px" }
     );
     
     observer.observe(videoRef.current);
@@ -38,7 +47,7 @@ const VideoBackground = () => {
   return (
     <video
       ref={videoRef}
-      autoPlay
+      autoPlay={isVisible}
       loop
       muted
       playsInline
@@ -47,7 +56,9 @@ const VideoBackground = () => {
       className="relative w-full h-full rounded-[inherit] border object-cover"
       style={{ width: "100%", height: "100%" }}
     >
-      <source src="/hero-vid.mp4" type="video/mp4" />
+      {isVisible && (
+        <source src="/hero-vid.mp4" type="video/mp4" />
+      )}
       Your browser does not support HTML5 video.
     </video>
   );
@@ -98,7 +109,7 @@ export default function HeroSection() {
         </div>
         <div
           ref={ref}
-          className="relative mt-[8rem] animate-fade-up opacity-0 [--animation-delay:400ms] [perspective:2000px] after:absolute after:inset-0 after:z-50 after:[background:linear-gradient(to_top,hsl(var(--background))_30%,transparent)]"
+          className="relative mt-[8rem] animate-fade-up opacity-0 [--animation-delay:400ms] [perspective:2000px]"
         >
           <div
             className={`rounded-xl border border-white/10 bg-[#fdfdfd] dark:bg-[#fdfdfd] bg-opacity-[0.01] before:absolute before:bottom-1/2 before:left-0 before:top-0 before:h-full before:w-full before:opacity-0 before:[filter:blur(180px)] before:[background-image:linear-gradient(to_bottom,var(--color-one),var(--color-one),transparent_40%)] ${
