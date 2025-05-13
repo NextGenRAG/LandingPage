@@ -1,12 +1,12 @@
 "use client";
 
-import { BorderBeam } from "../magicui/border-beam";
+import { WordRotate } from "../magicui/word-rotate";
 import TextShimmer from "../magicui/text-shimmer";
 import { Button } from "../ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { InteractiveHoverButton } from "../../components/magicui/interactive-hover-button";
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 import { useRouter } from "next/navigation";
 import { PromoBanner } from "../magicui/promo-banner";
 
@@ -77,8 +77,11 @@ export default function HeroSection() {
           
 
           <h1 className="bg-gradient-to-br from-purple-700 via-black to-pink-700 dark:from-purple-400 dark:via-white dark:to-pink-400 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-            Coursebite is the first
-            <br className="hidden md:block" /> integrated learning ecosystem.
+            Coursebite is the first<WordRotate 
+              words={["AI Tutor", "AI Learn", "AI instructor"]} 
+              className="inline"
+              duration={2500}
+            />
           </h1>
           <p className="mb-12 text-lg tracking-tight text-gray-600 dark:text-gray-300 md:text-xl text-balance translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
             Learn faster and reclaim your time with real instructors, expert-curated courses,
