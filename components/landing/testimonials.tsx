@@ -274,40 +274,39 @@ export default function Testimonials() {
       subtitle="What our customers are saying"
       className="max-w-8xl relative py-16"
     >
-      <div className="relative mt-6 max-h-screen overflow-hidden z-10">
-        <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4">
-          {Array(Math.ceil(testimonials.length / 3))
-            .fill(0)
-            .map((_, i) => (
-              <Marquee
-                vertical
-                key={i}
-                className={cn({
-                  "[--duration:60s]": i === 1,
-                  "[--duration:30s]": i === 2,
-                  "[--duration:70s]": i === 3,
-                })}
-              >
-                {testimonials.slice(i * 3, (i + 1) * 3).map((card, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      delay: Math.random() * 0.8,
-                      duration: 1.2,
-                    }}
-                  >
-                    <TestimonialCard {...card} />
-                  </motion.div>
-                ))}
-              </Marquee>
-            ))}
+      <div className="rounded-2xl bg-gray-100/80 dark:bg-gray-800/60 p-8 shadow-lg backdrop-blur-sm">
+        <div className="relative mt-6 max-h-screen overflow-hidden z-10">
+          <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4">
+            {Array(Math.ceil(testimonials.length / 3))
+              .fill(0)
+              .map((_, i) => (
+                <Marquee
+                  vertical
+                  key={i}
+                  className={cn({
+                    "[--duration:60s]": i === 1,
+                    "[--duration:30s]": i === 2,
+                    "[--duration:70s]": i === 3,
+                  })}
+                >
+                  {testimonials.slice(i * 3, (i + 1) * 3).map((card, idx) => (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        delay: Math.random() * 0.8,
+                        duration: 1.2,
+                      }}
+                    >
+                      <TestimonialCard {...card} />
+                    </motion.div>
+                  ))}
+                </Marquee>
+              ))}
+          </div>
         </div>
-        
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 w-full bg-gradient-to-t from-white/90 via-white/50 to-transparent dark:from-gray-950/90 dark:via-gray-950/50 dark:to-transparent"></div>
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 w-full bg-gradient-to-b from-white/90 via-white/50 to-transparent dark:from-gray-950/90 dark:via-gray-950/50 dark:to-transparent"></div>
       </div>
     </Section>
   );

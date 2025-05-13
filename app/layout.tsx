@@ -1,5 +1,4 @@
 import { ThemeProvider } from "../components/theme-provider";
-import { ThemeSystemSync } from "../components/theme-system-sync";
 import { Toaster } from "../components/ui/sonner";
 import { cn } from "../lib/utils";
 import type { Metadata } from "next";
@@ -30,15 +29,8 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              const storedTheme = localStorage.getItem('theme');
-              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-              
-              const theme = 
-                storedTheme === 'dark' || (storedTheme === null && prefersDark)
-                  ? 'dark'
-                  : '';
-              
-              document.documentElement.classList.add(theme);
+              // Always use dark mode
+              document.documentElement.classList.add('dark');
             `,
           }}
         />
@@ -65,11 +57,10 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          forcedTheme="dark"
           disableTransitionOnChange
         >
-          <ThemeSystemSync />
           {children}
           <Toaster />
         </ThemeProvider>

@@ -6,7 +6,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { AlignJustify, XIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ThemeToggle } from "./theme-toggle"
 
 export function SiteHeader() {
   const mobilenavbarVariant = {
@@ -84,7 +83,6 @@ export function SiteHeader() {
             <Link className="text-sm" href="/courses-offered">
               Our Courses
             </Link>
-            <ThemeToggle />
             <div className="flex items-center gap-x-4">
               <Link className="text-sm" href="/app/login">
                 Log in
@@ -124,7 +122,6 @@ export function SiteHeader() {
               Coursebite
             </Link>
             <div className="flex items-center gap-x-2">
-              <ThemeToggle />
               <button
                 className="ml-2 md:hidden"
                 onClick={() => setHamburgerMenuIsOpen((open) => !open)}

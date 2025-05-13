@@ -247,7 +247,7 @@ export default function Features({
                     ) : null}
 
                     <div className="flex items-center relative">
-                      <div className="item-box w-12 h-12 bg-primary/10 rounded-full sm:mx-6 mx-2 shrink-0 flex items-center justify-center">
+                      <div className=" bg-primary/10 rounded-full sm:mx-6 mx-2 shrink-0 flex items-center justify-center">
                         {item.icon}
                       </div>
 
@@ -266,7 +266,7 @@ export default function Features({
               </Accordion.Root>
             </div>
             <div
-              className={`relative h-auto w-full flex items-stretch justify-center overflow-hidden rounded-xl border border-neutral-300/50 shadow-lg ${
+              className={`relative h-auto w-full flex items-stretch justify-center overflow-hidden shadow-lg ${
                 ltr && "lg:order-1"
               }`}
             >

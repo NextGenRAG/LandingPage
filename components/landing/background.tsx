@@ -35,16 +35,16 @@ export function LandingBackground({ showGrid = true, fadeOut = false }: Backgrou
       className="fixed inset-0 -z-20 overflow-hidden"
       style={{ width: '100vw', height: '100vh' }}
     >
-      {/* Main background gradients - expanded and more prominent */}
-      <div className="absolute -top-[10%] -left-[10%] w-[120%] h-[120%] bg-purple-500/25 dark:bg-purple-600/30 rounded-full blur-[150px]"></div>
-      <div className="absolute -bottom-[10%] -right-[10%] w-[120%] h-[120%] bg-pink-500/25 dark:bg-pink-600/30 rounded-full blur-[150px]"></div>
+      {/* Main background gradients - darker and more subtle in dark mode */}
+      <div className="absolute -top-[10%] -left-[10%] w-[120%] h-[120%] bg-purple-500/25 dark:bg-gray-800/40 rounded-full blur-[150px]"></div>
+      <div className="absolute -bottom-[10%] -right-[10%] w-[120%] h-[120%] bg-pink-500/25 dark:bg-gray-900/40 rounded-full blur-[150px]"></div>
       
-      {/* Additional gradients to ensure full coverage of viewport */}
-      <div className="absolute top-[10%] left-[10%] w-[120%] h-[120%] bg-purple-400/20 dark:bg-purple-500/25 rounded-full blur-[120px]"></div>
-      <div className="absolute bottom-[10%] right-[10%] w-[120%] h-[120%] bg-pink-400/20 dark:bg-pink-500/25 rounded-full blur-[120px]"></div>
+      {/* Additional gradients - reduced opacity and darker in dark mode */}
+      <div className="absolute top-[10%] left-[10%] w-[120%] h-[120%] bg-purple-400/20 dark:bg-gray-800/30 rounded-full blur-[120px]"></div>
+      <div className="absolute bottom-[10%] right-[10%] w-[120%] h-[120%] bg-pink-400/20 dark:bg-gray-900/30 rounded-full blur-[120px]"></div>
       
-      {/* Center gradient for more even color distribution */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-gradient-to-br from-purple-500/15 to-pink-500/15 dark:from-purple-500/20 dark:to-pink-500/20 rounded-full blur-[100px]"></div>
+      {/* Center gradient - subtle dark purple in dark mode */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-gradient-to-br from-purple-500/15 to-pink-500/15 dark:from-gray-900/20 dark:to-purple-900/15 rounded-full blur-[100px]"></div>
       
       {/* Grid pattern with custom fade out effect */}
       {showGrid && (

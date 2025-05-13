@@ -38,7 +38,9 @@ export default function GetStartedSteps() {
           subtitle="Get started in 3 steps"
           className="[&>h3]:bg-gradient-to-r [&>h3]:from-purple-600 [&>h3]:to-pink-600 [&>h3]:dark:from-purple-400 [&>h3]:dark:to-pink-400 [&>h3]:bg-clip-text [&>h3]:text-transparent"
         >
-          <Features data={data} />
+          <div className="rounded-2xl bg-white/80 dark:bg-gray-900/80 border border-gray-100 dark:border-gray-800 p-8 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl ">
+            <Features data={data} />
+          </div>
         </Section>
       </div>
     </div>

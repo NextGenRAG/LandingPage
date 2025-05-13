@@ -51,7 +51,7 @@ export function StartupTimeline() {
   return (
     <section id="timeline" className="py-16 relative">
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 dark:from-purple-500 dark:via-pink-400 dark:to-purple-500 bg-clip-text text-transparent mb-12 text-center">
+        <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-700 via-pink-500 to-purple-600 dark:from-purple-400 dark:via-pink-300 dark:to-purple-300 bg-clip-text text-transparent mb-12 text-center">
           Our Journey & Future Prospects
         </h2>
 
