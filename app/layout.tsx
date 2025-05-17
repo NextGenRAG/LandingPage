@@ -25,7 +25,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* 2) Place your Google Tag Manager / Analytics scripts in <head> */}
+        {/* Theme initialization to avoid FOUC (Flash of Unstyled Content) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Always use dark mode
+              document.documentElement.classList.add('dark');
+            `,
+          }}
+        />
+        
+        {/* Google Tag Manager / Analytics scripts */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2CV05MT5MY"
           strategy="afterInteractive"
@@ -47,7 +57,8 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
+          forcedTheme="dark"
           disableTransitionOnChange
         >
           {children}

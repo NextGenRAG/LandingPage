@@ -13,25 +13,25 @@ const img_urls = [
 
 export function Universities() {
   return (
-    <section id="press">
-      <div className="py-14">
+    <section id="press" className="relative py-12">
+      <div className="py-14 relative z-10">
         <div className="container mx-auto px-4 md:px-8">
-          <h3 className="text-center text-sm font-semibold text-gray-500">
+          <h3 className="text-center text-sm font-semibold bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
             FEATURED IN
           </h3>
-          <div className="relative mt-6">
+          <div className="relative mt-6 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm p-4 rounded-xl">
             <Marquee className="max-w-full [--duration:40s]">
               {img_urls.map((logo, idx) => (
                 <img
                   key={idx}
                   src={`${logo}`}
-                  className="h-10 w-40 px-2 dark:brightness-0 dark:invert"
-                  alt={`logo-${logo}`}
+                  className="h-12 w-44 px-4 transition-all duration-300 hover:scale-110 dark:brightness-0 dark:invert opacity-70 hover:opacity-100"
+                  alt={`logo-${idx}`}
                 />
               ))}
             </Marquee>
-            <div className="pointer-events-none absolute inset-y-0 left-0 h-full w-1/3 bg-gradient-to-r from-background"></div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 h-full w-1/3 bg-gradient-to-l from-background"></div>
+            <div className="pointer-events-none absolute inset-y-0 left-0 h-full w-1/3 bg-gradient-to-r from-white dark:from-gray-900"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 h-full w-1/3 bg-gradient-to-l from-white dark:from-gray-900"></div>
           </div>
         </div>
       </div>
