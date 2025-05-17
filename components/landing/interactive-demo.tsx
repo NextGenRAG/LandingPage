@@ -145,6 +145,121 @@ const sampleCoursesData: DemoCourse[] = [
       },
     ],
   },
+  {
+    id: "cs3345",
+    name: "Data Structures & Algorithms",
+    code: "CS3345",
+    instructor: "Dr. Robert Sedgewick",
+    school: "Computer Science Department",
+    description: "Master fundamental data structures and algorithms in Java with practical applications and problem-solving techniques.",
+    progress: 45,
+    themeColor: "indigo",
+    icon: BookOpen,
+    rating: 4.8,
+    enrolled: 1340,
+    modules: [
+      {
+        id: "m1",
+        title: "Module 1: Fundamental Data Structures",
+        description: "Learn about arrays, linked lists, stacks, and queues.",
+        estimatedTime: "12 hours",
+        progress: 80,
+        items: [
+          { id: "item1a", type: "video", title: "Arrays and Their Applications", status: "COMPLETED", icon: Video },
+          { id: "item1b", type: "reading", title: "Linked Lists Implementation", status: "COMPLETED", icon: FileText },
+          { id: "item1c", type: "quiz", title: "Stack and Queue Operations", status: "IN_PROGRESS", icon: HelpCircle },
+          { id: "item1d", type: "assignment", title: "Implement a Circular Queue", status: "NOT_STARTED", icon: GraduationCap },
+        ],
+      },
+      {
+        id: "m2",
+        title: "Module 2: Trees and Graphs",
+        description: "Explore hierarchical and network-based data structures.",
+        estimatedTime: "14 hours",
+        progress: 40,
+        items: [
+          { id: "item2a", type: "video", title: "Binary Trees and BST", status: "COMPLETED", icon: Video },
+          { id: "item2b", type: "reading", title: "Balanced Tree Structures", status: "IN_PROGRESS", icon: FileText },
+          { id: "item2c", type: "assignment", title: "Graph Traversal Algorithms", status: "NOT_STARTED", icon: GraduationCap },
+        ],
+      },
+      {
+        id: "m3",
+        title: "Module 3: Algorithms Analysis",
+        description: "Techniques to analyze and improve algorithm efficiency.",
+        estimatedTime: "16 hours",
+        progress: 0,
+        items: [
+          { id: "item3a", type: "lesson", title: "Big O Notation and Time Complexity", status: "NOT_STARTED", icon: Lightbulb },
+          { id: "item3b", type: "video", title: "Sorting Algorithms Comparison", status: "NOT_STARTED", icon: Video },
+          { id: "item3c", type: "assignment", title: "Optimize a Search Algorithm", status: "NOT_STARTED", icon: GraduationCap },
+        ],
+      },
+    ],
+  },
+  {
+    id: "cs2305",
+    name: "Discrete Math for Computing",
+    code: "CS/CE2305",
+    instructor: "Dr. Maria Rodriguez",
+    school: "Mathematics & Computer Science",
+    description: "Explore mathematical foundations critical for computer science including logic, set theory, combinatorics, and graph theory.",
+    progress: 65,
+    themeColor: "blue",
+    icon: ListChecks,
+    rating: 4.6,
+    enrolled: 980,
+    modules: [
+      {
+        id: "m1",
+        title: "Module 1: Propositional Logic",
+        description: "Learn the foundations of logical reasoning and proofs.",
+        estimatedTime: "10 hours",
+        progress: 100,
+        items: [
+          { id: "item1a", type: "video", title: "Logical Operators and Truth Tables", status: "COMPLETED", icon: Video },
+          { id: "item1b", type: "assignment", title: "Construct Valid Arguments", status: "COMPLETED", icon: GraduationCap },
+          { id: "item1c", type: "quiz", title: "Logical Equivalences", status: "COMPLETED", icon: HelpCircle },
+        ],
+      },
+      {
+        id: "m2",
+        title: "Module 2: Set Theory and Functions",
+        description: "Understand mathematical collections and mappings.",
+        estimatedTime: "8 hours",
+        progress: 75,
+        items: [
+          { id: "item2a", type: "video", title: "Set Operations and Venn Diagrams", status: "COMPLETED", icon: Video },
+          { id: "item2b", type: "reading", title: "Functions and Relations", status: "COMPLETED", icon: FileText },
+          { id: "item2c", type: "assignment", title: "Prove Set Properties", status: "IN_PROGRESS", icon: GraduationCap },
+        ],
+      },
+      {
+        id: "m3",
+        title: "Module 3: Combinatorics",
+        description: "Master counting principles for algorithmic analysis.",
+        estimatedTime: "9 hours",
+        progress: 20,
+        items: [
+          { id: "item3a", type: "lesson", title: "Permutations and Combinations", status: "IN_PROGRESS", icon: Lightbulb },
+          { id: "item3b", type: "quiz", title: "Binomial Coefficients", status: "NOT_STARTED", icon: HelpCircle },
+          { id: "item3c", type: "assignment", title: "Solve Counting Problems", status: "NOT_STARTED", icon: GraduationCap },
+        ],
+      },
+      {
+        id: "m4",
+        title: "Module 4: Graph Theory",
+        description: "Explore mathematical structures for modeling relationships.",
+        estimatedTime: "11 hours",
+        progress: 0,
+        items: [
+          { id: "item4a", type: "video", title: "Graph Representations", status: "NOT_STARTED", icon: Video },
+          { id: "item4b", type: "reading", title: "Graph Algorithms and Applications", status: "NOT_STARTED", icon: FileText },
+          { id: "item4c", type: "assignment", title: "Model Problems with Graphs", status: "NOT_STARTED", icon: GraduationCap },
+        ],
+      },
+    ],
+  },
 ];
 
 // --- Helper to get theme classes ---
@@ -461,7 +576,7 @@ export default function InteractiveDemo() {
   };
   
   return (
-    <div className="relative py-12 md:py-16 bg-gradient-to-br from-white to-purple-50 dark:from-black dark:to-purple-950/20">
+    <div className="relative py-12 md:py-16">
       <div className="relative z-10 container mx-auto px-4">
         <Section 
           title="Interactive Platform Demo"
@@ -498,10 +613,6 @@ export default function InteractiveDemo() {
             </p>
           </div>
         </Section>
-      </div>
-      {/* Add subtle purple gradient background */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-1/2 left-0 w-full h-[200%] bg-gradient-to-br from-purple-600/5 via-transparent to-pink-600/5 dark:from-purple-900/10 dark:to-pink-900/10 blur-[100px] transform -skew-y-12"></div>
       </div>
     </div>
   );
