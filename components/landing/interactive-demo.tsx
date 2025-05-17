@@ -256,7 +256,7 @@ export default function InteractiveDemo() {
             
             <MagicCard className="p-5 mb-6">
               <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Interactive Assignment</h3>
-              <p className="mb-4 text-gray-700 dark:text-gray-300">Apply what you've learned with this hands-on project. Complete to earn your certificate!</p>
+              <p className="mb-4 text-gray-700 dark:text-gray-300">Apply what you&apos;ve learned with this hands-on project. Complete to earn your certificate!</p>
               <ShimmerButton 
                 className="px-4 py-2"
                 onClick={() => updateProgress(100)}
@@ -274,7 +274,7 @@ export default function InteractiveDemo() {
               <CheckCircle className="w-10 h-10 text-green-600 dark:text-green-400" />
             </div>
             <h2 className="text-3xl font-bold mb-2 text-center text-gray-900 dark:text-white">Congratulations!</h2>
-            <p className="text-lg text-center mb-6 text-gray-700 dark:text-gray-300">You've successfully completed the course.</p>
+            <p className="text-lg text-center mb-6 text-gray-700 dark:text-gray-300">You&apos;ve successfully completed the course.</p>
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-gray-800 dark:to-purple-900 p-[2px] rounded-xl mb-8">
               <div className="bg-white dark:bg-gray-900 rounded-lg p-6 w-full max-w-lg">
                 <h3 className="text-xl font-bold mb-4 text-center text-gray-900 dark:text-white">Certificate of Completion</h3>

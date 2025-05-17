@@ -1,5 +1,6 @@
 import { DiscordLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import Image from "next/image";
 
 const footerNavs = [
   {
@@ -80,8 +81,11 @@ export function SiteFooter() {
         <div className="md:flex md:justify-between px-8 p-4 py-16 sm:pb-16 gap-4">
           <div className="mb-12 flex-col flex gap-4">
             <Link href="/" className="flex items-center gap-2 group transition-all duration-300">
-              <img
+              <Image
                 src='/logo.svg'
+                alt="Coursebite Logo"
+                width={40}
+                height={40}
                 className="h-10 w-10 group-hover:scale-110 transition-transform duration-300"
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap bg-gradient-to-r from-purple-700 to-pink-700 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">

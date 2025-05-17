@@ -107,7 +107,7 @@ const testimonials = [
         <Highlight>
           Adaptive lessons and real-time feedback keep me on track with my studies.
         </Highlight>{" "}
-        It's an essential tool for any dedicated learner.
+        It&apos;s an essential tool for any dedicated learner.
       </p>
     ),
   },
@@ -121,7 +121,7 @@ const testimonials = [
         <Highlight>
           Collaborative tools and resource integration have boosted my performance.
         </Highlight>{" "}
-        It's an innovative platform for student success.
+        It&apos;s an innovative platform for student success.
       </p>
     ),
   },
@@ -149,7 +149,7 @@ const testimonials = [
         <Highlight>
           Its intelligent recommendations have made mastering complex topics simpler.
         </Highlight>{" "}
-        I'm more confident in my studies than ever.
+        I&apos;m more confident in my studies than ever.
       </p>
     ),
   },
@@ -163,7 +163,7 @@ const testimonials = [
         <Highlight>
           Seamless access to diverse learning materials has enriched my academic life.
         </Highlight>{" "}
-        It's a must-have platform for every student.
+        It&apos;s a must-have platform for every student.
       </p>
     ),
   },
@@ -191,7 +191,7 @@ const testimonials = [
         <Highlight>
           Personalized learning paths and interactive feedback have boosted my confidence.
         </Highlight>{" "}
-        It's a revolutionary platform for modern learners.
+        It&apos;s a revolutionary platform for modern learners.
       </p>
     ),
   },
@@ -203,9 +203,9 @@ const testimonials = [
       <p>
         #Coursebite has transformed my academic routine with its user-friendly design.
         <Highlight>
-          The platform's innovative features facilitate effective collaboration and learning.
+          The platform&apos;s innovative features facilitate effective collaboration and learning.
         </Highlight>{" "}
-        It's a vital tool in my educational journey.
+        It&apos;s a vital tool in my educational journey.
       </p>
     ),
   },
@@ -219,13 +219,13 @@ const testimonials = [
         <Highlight>
           The integration of multimedia resources and interactive assessments enhances my understanding.
         </Highlight>{" "}
-        It's an indispensable part of my academic life.
+        It&apos;s an indispensable part of my academic life.
       </p>
     ),
   },
   {
     name: "Jake Morrison",
-    role: "Master's Student at Duke University",
+    role: "Master&apos;s Student at Duke University",
     img: "https://randomuser.me/api/portraits/men/25.jpg",
     description: (
       <p>
@@ -233,7 +233,7 @@ const testimonials = [
         <Highlight>
           Its smart assessments and feedback mechanisms keep me challenged and motivated.
         </Highlight>{" "}
-        It's a transformative tool for mastering new concepts.
+        It&apos;s a transformative tool for mastering new concepts.
       </p>
     ),
   },
@@ -247,7 +247,7 @@ const testimonials = [
         <Highlight>
           On-demand tutorials and interactive study sessions have redefined my learning experience.
         </Highlight>{" "}
-        It's flexible and effective for today's student.
+        It&apos;s flexible and effective for today&apos;s student.
       </p>
     ),
   },
@@ -261,7 +261,7 @@ const testimonials = [
         <Highlight>
           The blend of collaborative features and rich content makes studying dynamic.
         </Highlight>{" "}
-        It's an essential resource for academic excellence.
+        It&apos;s an essential resource for academic excellence.
       </p>
     ),
   },

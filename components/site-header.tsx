@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { AlignJustify, XIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function SiteHeader() {
   const mobilenavbarVariant = {
@@ -67,7 +68,13 @@ export function SiteHeader() {
         <div className="container flex h-[3.5rem] items-center justify-between">
           {/* Left: Logo */}
           <div className="flex items-center gap-x-1">
-            <img src="/logo.svg" alt="logo" className="flex items-center" />
+            <Image 
+              src="/logo.svg" 
+              alt="Coursebite Logo" 
+              width={24} 
+              height={24} 
+              className="flex items-center" 
+            />
             <Link className="text-md flex items-center" href="/">
               Coursebite
             </Link>
