@@ -91,6 +91,7 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
     };
 
     const elements = useMemo(() => {
+      if (!texts[currentTextIndex]) return [];
       const currentText: string = texts[currentTextIndex];
       if (splitBy === "characters") {
         const words = currentText.split(" ");
@@ -202,10 +203,13 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
       return () => clearInterval(intervalId);
     }, [next, rotationInterval, auto]);
 
+    // Ensure we have valid text before rendering
+    if (texts.length === 0) return null;
+
     return (
       <motion.span
         className={cn(
-          "flex flex-wrap whitespace-pre-wrap relative",
+          "flex flex-wrap relative items-center",
           mainClassName
         )}
         {...rest}
@@ -222,7 +226,7 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
             className={cn(
               splitBy === "lines"
                 ? "flex flex-col w-full"
-                : "flex flex-wrap whitespace-pre-wrap relative"
+                : "flex flex-wrap relative z-10 tracking-tight"
             )}
             layout
             aria-hidden="true"
@@ -252,7 +256,10 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
                           )
                         ),
                       }}
-                      className={cn("inline-block", elementLevelClassName)}
+                      className={cn(
+                        "inline-block relative", 
+                        elementLevelClassName
+                      )}
                     >
                       {char}
                     </motion.span>

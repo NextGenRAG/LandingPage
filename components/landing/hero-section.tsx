@@ -77,21 +77,27 @@ export default function HeroSection() {
           
 
           <h1 className="bg-gradient-to-br from-purple-700 via-black to-pink-700 dark:from-purple-400 dark:via-white dark:to-pink-400 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-            Coursebite is the first
-            <RotatingText 
-              texts={["AI Tutor", "AI Learn", "AI Instructor"]} 
-              mainClassName="inline-flex ml-2 min-w-[140px] text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 dark:from-purple-400 dark:to-pink-400"
-              splitLevelClassName="overflow-hidden font-bold"
-              elementLevelClassName="font-bold"
-              initial={{ y: "100%", opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: "-100%", opacity: 0 }}
-              transition={{ type: "spring", damping: 30, stiffness: 350 }}
-              staggerDuration={0.025}
-              staggerFrom="first"
-              rotationInterval={3000}
-              splitBy="characters"
-            />
+            Coursebite is the first 
+            <span className="relative inline-flex items-baseline">
+              <RotatingText 
+                texts={[" AI Tutor", " AI Learn", " AI Instructor"]} 
+                mainClassName="inline-flex ml-2 min-w-[180px] tracking-tighter leading-none font-medium"
+                splitLevelClassName="overflow-hidden"
+                elementLevelClassName="relative text-purple-600 dark:text-purple-200 text-shadow"
+                initial={{ y: "100%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: "-100%", opacity: 0 }}
+                transition={{ type: "spring", damping: 30, stiffness: 350 }}
+                staggerDuration={0.025}
+                staggerFrom="first"
+                rotationInterval={3000}
+                splitBy="characters"
+              />
+              {/* Subtle gradient background that matches the heading style */}
+              {/* <div className="absolute inset-0 rounded-lg -z-10">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-pink-100/20 dark:from-purple-800/30 dark:to-pink-800/30 rounded-lg opacity-40"></div>
+              </div> */}
+            </span>
           </h1>
           <p className="mb-12 text-lg tracking-tight text-gray-600 dark:text-gray-300 md:text-xl text-balance translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
             Learn faster and reclaim your time with real instructors, expert-curated courses,
