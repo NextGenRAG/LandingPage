@@ -7,11 +7,13 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
+
 import { useRouter } from "next/navigation";
 import { PromoBanner } from "../magicui/promo-banner";
 
 const VideoBackground = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
   
   // Only start loading and playing the video when it's in view
   useEffect(() => {
@@ -23,12 +25,20 @@ const VideoBackground = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          videoRef.current?.play().catch(error => {
-            console.warn("Video autoplay failed:", error);
-          });
+          setIsVisible(true);
+          
+          // Add a small delay before loading the video to improve perceived performance
+          setTimeout(() => {
+            if (videoRef.current) {
+              videoRef.current.load();
+              videoRef.current.play().catch(error => {
+                console.warn("Video autoplay failed:", error);
+              });
+            }
+          }, 300);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: "200px" }
     );
     
     observer.observe(currentVideoRef);
@@ -42,7 +52,7 @@ const VideoBackground = () => {
   return (
     <video
       ref={videoRef}
-      autoPlay
+      autoPlay={isVisible}
       loop
       muted
       playsInline
@@ -51,7 +61,9 @@ const VideoBackground = () => {
       className="relative w-full h-full rounded-[inherit] border object-cover"
       style={{ width: "100%", height: "100%" }}
     >
-      <source src="/hero-vid.mp4" type="video/mp4" />
+      {isVisible && (
+        <source src="/hero-vid.mp4" type="video/mp4" />
+      )}
       Your browser does not support HTML5 video.
     </video>
   );
@@ -79,6 +91,7 @@ export default function HeroSection() {
       >
         <div className="relative z-10">
           
+
 
           <h1 className="bg-gradient-to-br from-purple-700 via-black to-pink-700 dark:from-purple-400 dark:via-white dark:to-pink-400 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
             Coursebite has the first 
