@@ -5,6 +5,16 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
 
+/* Typing cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 0.85s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+
 /* Casino slot machine effect */
 @keyframes spin {
   0% {

@@ -77,10 +77,12 @@ export default function HeroSection() {
           
 
           <h1 className="bg-gradient-to-br from-purple-700 via-black to-pink-700 dark:from-purple-400 dark:via-white dark:to-pink-400 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-            Coursebite is the first<WordRotate 
-              words={["AI Tutor", "AI Learn", "AI instructor"]} 
-              className="inline"
-              duration={2500}
+            Coursebite is the first
+            <WordRotate 
+              words={["AI Tutor", "AI Learn", "AI Instructor"]} 
+              typingSpeed={60}
+              pauseTime={2000}
+              className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 dark:from-purple-400 dark:to-pink-400"
             />
           </h1>
           <p className="mb-12 text-lg tracking-tight text-gray-600 dark:text-gray-300 md:text-xl text-balance translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
