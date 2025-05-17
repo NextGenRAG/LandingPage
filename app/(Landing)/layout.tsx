@@ -15,11 +15,7 @@ export default async function LandingLayout({
         {children}
       </main>
       <div className="relative z-20">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -bottom-[10%] -right-[10%] w-[120%] h-[120%] bg-pink-500/25 dark:bg-pink-600/30 rounded-full blur-[150px]"></div>
-          <div className="absolute -top-[10%] -left-[10%] w-[120%] h-[120%] bg-purple-500/25 dark:bg-purple-600/30 rounded-full blur-[150px]"></div>
-        </div>
-        <div className="relative z-10 bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm">
+        <div className="relative z-10 bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm border-t border-purple-100 dark:border-purple-900/20">
           <SiteFooter />
         </div>
       </div>
