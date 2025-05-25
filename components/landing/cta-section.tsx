@@ -94,11 +94,11 @@ const Card = (card: { icon: JSX.Element; bg: JSX.Element }) => {
       initial={{ opacity: 0 }}
       animate={controls}
       className={cn(
-        "relative size-20 cursor-pointer overflow-hidden rounded-2xl border p-4",
+        "relative size-20 cursor-pointer overflow-hidden rounded-2xl border p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl",
         // light styles
-        "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+        "bg-white/80 backdrop-blur-sm border-gray-100 shadow-sm",
         // dark styles
-        "transform-gpu dark:bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+        "transform-gpu dark:bg-gray-900/80 dark:border-gray-800"
       )}
     >
       {card.icon}
@@ -124,8 +124,12 @@ export default function CallToActionSection() {
   }, []);
 
   return (
-    <section id="cta">
-      <div className="py-14">
+    <section id="cta" className="relative py-16 pb-24 mb-8">
+      {/* Background gradient decorations */}
+      <div className="absolute -top-40 -left-40 w-96 h-96 bg-purple-500/20 dark:bg-purple-500/25 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-pink-500/20 dark:bg-pink-500/25 rounded-full blur-3xl"></div>
+      
+      <div className="py-14 relative z-10">
         <div className="flex w-full flex-col items-center justify-center">
           <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
             <Marquee
@@ -171,14 +175,14 @@ export default function CallToActionSection() {
               ))}
             </Marquee>
             <div className="absolute z-10">
-              <div className="mx-auto size-24 rounded-[2rem] border bg-white/10 p-3 shadow-2xl backdrop-blur-md dark:bg-black/10 lg:size-32">
-                <HeartHandshake className="mx-auto size-16 text-black dark:text-white lg:size-24" />
+              <div className="mx-auto size-24 rounded-[2rem] border border-gray-100 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md p-3 shadow-xl hover:shadow-2xl transition-all duration-300 lg:size-32">
+                <HeartHandshake className="mx-auto size-16 text-purple-600 dark:text-purple-400 lg:size-24" />
               </div>
-              <div className="z-10 mt-4 flex flex-col items-center text-center text-primary">
-                <h1 className="text-3xl font-bold lg:text-4xl">
+              <div className="z-10 mt-4 flex flex-col items-center text-center">
+                <h1 className="text-3xl font-bold lg:text-4xl bg-gradient-to-r from-purple-700 to-pink-700 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
                   Stop wasting time with ineffective study.
                 </h1>
-                <p className="mt-2">
+                <p className="mt-2 text-gray-700 dark:text-gray-300">
                   Start your 7-day free trial.
                 </p>
                 <Link
@@ -188,16 +192,17 @@ export default function CallToActionSection() {
                       size: "lg",
                       variant: "outline",
                     }),
-                    "group mt-4 rounded-[2rem] px-6"
+                    "group mt-4 rounded-[2rem] px-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-pink-600 hover:to-purple-600 text-white border-none hover:-translate-y-1 transition-all duration-300"
                   )}
                 >
                   Get Started
                   <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
                 </Link>
               </div>
-              <div className="absolute inset-0 -z-10 rounded-full  bg-backtround opacity-40 blur-xl dark:bg-background" />
+              <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 dark:from-purple-500/30 dark:to-pink-500/30 opacity-40 blur-xl" />
             </div>
-            <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent to-background to-70% dark:to-background" />
+            {/* Modified gradient fade to blend with footer */}
+            <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent via-white/50 to-white dark:via-gray-950/50 dark:to-gray-950"></div>
           </div>
         </div>
       </div>

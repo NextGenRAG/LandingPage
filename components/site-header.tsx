@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { AlignJustify, XIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function SiteHeader() {
   const mobilenavbarVariant = {
@@ -42,8 +43,7 @@ export function SiteHeader() {
     { id: 2, label: "FAQ", href: "/faq" },
     { id: 3, label: "Courses Offered", href: "/courses-offered" },
     { id: 4, label: "Log in", href: "/app/login" },
-    { id: 5, label: "Sign up", href: "/app/login",},
-  
+    { id: 5, label: "Sign up", href: "/app/login" },
   ];
 
   useEffect(() => {
@@ -68,7 +68,13 @@ export function SiteHeader() {
         <div className="container flex h-[3.5rem] items-center justify-between">
           {/* Left: Logo */}
           <div className="flex items-center gap-x-1">
-            <img src="/logo.svg" alt="logo" className="flex items-center" />
+            <Image 
+              src="/logo.svg" 
+              alt="Coursebite Logo" 
+              width={24} 
+              height={24} 
+              className="flex items-center" 
+            />
             <Link className="text-md flex items-center" href="/">
               Coursebite
             </Link>
@@ -122,13 +128,15 @@ export function SiteHeader() {
             <Link className="text-md flex items-center" href="/">
               Coursebite
             </Link>
-            <button
-              className="ml-6 md:hidden"
-              onClick={() => setHamburgerMenuIsOpen((open) => !open)}
-            >
-              <span className="sr-only">Toggle menu</span>
-              {hamburgerMenuIsOpen ? <XIcon /> : <AlignJustify />}
-            </button>
+            <div className="flex items-center gap-x-2">
+              <button
+                className="ml-2 md:hidden"
+                onClick={() => setHamburgerMenuIsOpen((open) => !open)}
+              >
+                <span className="sr-only">Toggle menu</span>
+                {hamburgerMenuIsOpen ? <XIcon /> : <AlignJustify />}
+              </button>
+            </div>
           </div>
           <motion.ul
             className="flex flex-col md:flex-row md:items-center md:normal-case ease-in"
