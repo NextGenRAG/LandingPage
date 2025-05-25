@@ -5,7 +5,7 @@ import TextShimmer from "../magicui/text-shimmer";
 import { Button } from "../ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 
 import { useRouter } from "next/navigation";
