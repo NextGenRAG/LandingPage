@@ -8,8 +8,6 @@ import Features from "../../components/landing/features";
 import { WhatIsCoursebite } from "../../components/landing/what-is-coursebite";
 import TimelineEvent from "../../components/landing/timeline-section";
 import LandingBackground from "../../components/landing/background";
-import FAQSection from "../../components/landing/faq-section";
-import CallToActionSection from "../../components/landing/cta-section";
 
 export default async function Page() {
   return (
@@ -35,12 +33,12 @@ export default async function Page() {
         <div className="relative">
           <HeroSection />
           <ClientSection />
+          <FreeSection />
         </div>
         
         {/* Sections after grid fade-out */}
         <div className="relative">
           <WhatIsCoursebite />
-          <FreeSection />
           <InteractiveDemo />
           <Features />
           <Testimonials />

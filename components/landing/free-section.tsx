@@ -33,7 +33,7 @@ export default function FreeSection() {
           {/* Main heading */}
           <h2 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-              Coursebite is Now Completely Free!
+              Coursebite is Completely Free!
             </span>
           </h2>
 
