@@ -32,8 +32,8 @@ export default async function Page() {
         {/* First sections (with grid pattern) */}
         <div className="relative">
           <HeroSection />
-          <ClientSection />
           <FreeSection />
+          <ClientSection />
         </div>
         
         {/* Sections after grid fade-out */}
