@@ -249,52 +249,23 @@ export default function termsPage() {
       <h2 className="font-semibold">Cancellation/Refund Policy</h2>
       <ol>
         <li><strong>Scope</strong><br/>
-          This policy applies to all transactions involving digital datasets (&quot;Data&quot;) provided by Coursebite
-          Education Corporation. By accessing or using the Data, you agree to these terms.
+          This policy applies to all educational services and digital resources provided by Coursebite
+          Education Corporation. By accessing or using our services, you agree to these terms.
         </li>
-        <li><strong>Nature of the Data &amp;&nbsp;Compliance with Consumer Protection Laws</strong><br/>
-          Since the Data is delivered digitally and accessible immediately, refunds or cancellations are
-          limited. We comply with consumer protection laws and provide remedies where required.
+        <li><strong>Free Access</strong><br/>
+          Coursebite is now completely free to use. No payment is required for any of our services,
+          courses, or features. As such, refund policies are not applicable.
         </li>
-        <li><strong>Eligibility for Refunds</strong><br/>
-          Non-Conformity or Defects: If the Data is incomplete, corrupted, or significantly deviates from the
-          agreed description or quality standards, you may request a remedy within <strong>30 days</strong>.
-          Remedies may include repair, replacement, or a refund as required by law.
-          <ul>
-            <li>
-              Access Failures: If you cannot access the Data due to our fault, and the issue persists for over
-              15 days after purchase, you may be eligible for a refund or other remedies as per law.
-            </li>
-            <li>
-              Material Misrepresentation: If the Data substantially differs from advertised representations,
-              affecting its value or utility, you may request a remedy within 30 days.
-            </li>
-          </ul>
+        <li><strong>Account Termination</strong><br/>
+          You may delete your account at any time through your account settings. All your data will be
+          removed according to our privacy policy.
         </li>
-        <li><strong>Non-Refundable Cases</strong><br/>
-          <ul>
-            <li>
-              Accessed or Downloaded Content: Generally, no refunds after accessing or downloading the
-              Data, unless required under Section 4 or by law.
-            </li>
-            <li>
-              Incompatibility or Misuse: No refunds for issues caused by your own systems or improper use.
-              Ensure you have the proper environment before purchase.
-            </li>
-            <li>
-              Change of Mind: Refunds are not issued for changes of mind or dissatisfaction unrelated to
-              product defects or misrepresentations, unless required by law.
-            </li>
-          </ul>
+        <li><strong>Service Availability</strong><br/>
+          While we strive to maintain continuous service availability, we reserve the right to modify,
+          suspend, or discontinue any part of the service with reasonable notice.
         </li>
-        <li><strong>Subscription Cancellations</strong><br/>
-          You may cancel a subscription at any time; it takes effect at the end of the current billing cycle.
-          No prorated refunds for unused periods unless required by law.
-        </li>
-        <li><strong>Requesting Refunds or Cancellations</strong><br/>
-          Procedure: Contact our support at <a href="mailto:admin@coursebite.ai">admin@coursebite.ai</a> with your order number, purchase date,
-          and issue description. If approved, refunds will be processed within 15 business days, subject to
-          payment processor timelines.
+        <li><strong>Support</strong><br/>
+          For any questions or issues, contact our support at <a href="mailto:admin@coursebite.ai">admin@coursebite.ai</a>.
         </li>
       </ol>
       <p>&nbsp;</p>

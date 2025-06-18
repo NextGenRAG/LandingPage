@@ -1,6 +1,6 @@
 import ClientSection from "../../components/landing/client-section";
 import HeroSection from "../../components/landing/hero-section";
-import PricingSection from "../../components/landing/pricing-section";
+import FreeSection from "../../components/landing/free-section";
 import Particles from "../../components/magicui/particles";
 import InteractiveDemo from "../../components/landing/interactive-demo";
 import Testimonials from "../../components/landing/testimonials";
@@ -40,6 +40,7 @@ export default async function Page() {
         {/* Sections after grid fade-out */}
         <div className="relative">
           <WhatIsCoursebite />
+          <FreeSection />
           <InteractiveDemo />
           <Features />
           <Testimonials />

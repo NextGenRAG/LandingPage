@@ -40,11 +40,10 @@ export function SiteHeader() {
 
   // Define mobile menu items including login and sign up.
   const mobileMenuItems = [
-    { id: 1, label: "Pricing", href: "/pricing" },
-    { id: 2, label: "FAQ", href: "/faq" },
-    { id: 3, label: "Courses Offered", href: "/courses-offered" },
-    { id: 4, label: "Log in", href: "/app/login" },
-    { id: 5, label: "Sign up", href: "/app/login" },
+    { id: 1, label: "FAQ", href: "/faq" },
+    { id: 2, label: "Courses Offered", href: "/courses-offered" },
+    { id: 3, label: "Log in", href: "/app/login" },
+    { id: 4, label: "Sign up", href: "https://coursebite.ai/app/signup" },
   ];
 
   useEffect(() => {
@@ -82,9 +81,6 @@ export function SiteHeader() {
           </div>
           {/* Desktop Navigation: hidden on mobile */}
           <div className="hidden md:flex ml-auto h-full items-center gap-x-4">
-            <Link className="text-sm" href="/pricing">
-              Pricing
-            </Link>
             <Link className="text-sm" href="/faq">
               FAQ
             </Link>
@@ -97,7 +93,7 @@ export function SiteHeader() {
               </Link>
               <Link
                 className={cn(buttonVariants({ variant: "secondary" }), "text-sm")}
-                href="/app/login"
+                href="https://coursebite.ai/app/signup"
               >
                 Sign up
               </Link>

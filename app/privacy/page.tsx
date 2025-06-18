@@ -40,8 +40,7 @@ export default function privacyPage() {
         </ul>
         <p>&nbsp;</p>
         <p>
-          If you purchase the Company&apos;s products and services, we collect billing and credit card
-          information. This information is used to complete the purchase transaction.
+          We do not collect any payment information as our platform is completely free to use.
         </p>
         <p>&nbsp;</p>
         <p>
@@ -61,8 +60,7 @@ export default function privacyPage() {
           However, you may be required to provide certain personal information to us when you elect to use
           certain products or services. These may include: (a) registering for an account; (b) entering a
           sweepstakes or contest sponsored by us or one of our partners; (c) signing up for special offers
-          from selected third parties; (d) sending us an email message; (e) submitting your credit card or
-          other payment information when ordering and purchasing products and services. To wit, we will
+          from selected third parties; (d) sending us an email message. To wit, we will
           use your information for, but not limited to, communicating with you in relation to services and/or
           products you have requested from us. We also may gather additional personal or non-personal
           information in the future.
@@ -80,7 +78,7 @@ export default function privacyPage() {
           - to provide you with notices about your account
           <br />
           - to carry out the Company&apos;s obligations and enforce our rights arising from any contracts entered
-          between you and us, including for billing and collection
+          between you and us
           <br />
           - to notify you about changes to our Coursebite.AI or any products or services we offer or provide
           through it

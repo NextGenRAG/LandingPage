@@ -10,34 +10,34 @@ import {
    
   const faqs = [
     {
-      question: "Is there a free plan?",
+      question: "Is Coursebite really free?",
       answer:
-        "Sadly no, but we offer a free trial. You can cancel anytime, no questions asked.",
+        "Yes! Coursebite is now completely free with no hidden costs. You get unlimited access to all features including AI tutoring, practice exams, and all available courses.",
     },
     {
-      question: "Do you offer any discounts?",
+      question: "Do I need a credit card to sign up?",
       answer:
-        "We offer a free trial and several different promo codes if you sign up for our newsletter or receive a referral.",
+        "No credit card required! Simply sign up with your email and start learning immediately. We believe education should be accessible to everyone.",
     },
     {
-      question: "How do I cancel my subscription?",
+      question: "What features are included in the free access?",
       answer:
-        "You can cancel anytime in your account settings. You'll keep access until your current billing period ends.",
+        "Everything! You get access to our AI-powered tutor, automated grading, unlimited courses, practice exams, study guides, expert AI lectures, and personalized learning paths - all at no cost.",
     },
     {
       question: "Can I create my own course?",
       answer:
-        "Currently we only offer CourseBite curated courses, community courses are currently in development and will allow you to create, moderate and share your custom courses to the entire coursebite platform.",
+        "Currently we only offer Coursebite curated courses. Community courses are in development and will allow you to create, moderate and share your custom courses to the entire Coursebite platform.",
     },
     {
-      question: "Can CourseBite be utilized by educators?",
+      question: "Can Coursebite be utilized by educators?",
       answer:
-        "Yes, although there are still features currently in development that need to be added to replace a (LMS) Learning Management System like Canva or Blackboard, educators can leverage the features to make sure all students get high quality practice material with no additional effort from the educator.",
+        "Yes! Educators can leverage our features to ensure all students get high-quality practice material with no additional effort. While we're still developing features to fully replace traditional LMS platforms, Coursebite is already a powerful supplementary tool.",
     },
     {
-        question: "What if CourseBite does not carry the course I need?",
+        question: "What if Coursebite doesn't have the course I need?",
         answer:
-          "Sign up for our newsletter and you can submit requests while community courses are still in development, we will notify all subscribers when new courses are added.",
+          "Sign up for our newsletter to submit course requests. We're constantly adding new courses and will notify all users when new content becomes available. Community courses are also coming soon!",
     },
   ];
    
