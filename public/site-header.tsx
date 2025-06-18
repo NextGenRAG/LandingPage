@@ -70,10 +70,10 @@ export function SiteHeader() {
           {/* Left: Logo */}
           <div className="flex items-center gap-x-1">
             <Image 
-              src="/icon_light.svg"
+              src={useTheme().theme === 'dark' ? "/icon_light.svg" : "/icon_dark.svg"}
               alt="Coursebite Logo" 
-              width={30} 
-              height={30} 
+              width={24} 
+              height={24} 
               priority
             />
             <Link className="text-md flex items-center" href="/">

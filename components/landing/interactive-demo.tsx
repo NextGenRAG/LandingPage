@@ -170,8 +170,8 @@ const sampleCoursesData: DemoCourse[] = [
           { id: "item1c", type: "quiz", title: "Stack and Queue Operations", status: "IN_PROGRESS", icon: HelpCircle },
           { id: "item1d", type: "assignment", title: "Implement a Circular Queue", status: "NOT_STARTED", icon: GraduationCap },
         ],
-      },
-      {
+  },
+  {
         id: "m2",
         title: "Module 2: Trees and Graphs",
         description: "Explore hierarchical and network-based data structures.",
@@ -221,8 +221,8 @@ const sampleCoursesData: DemoCourse[] = [
           { id: "item1b", type: "assignment", title: "Construct Valid Arguments", status: "COMPLETED", icon: GraduationCap },
           { id: "item1c", type: "quiz", title: "Logical Equivalences", status: "COMPLETED", icon: HelpCircle },
         ],
-      },
-      {
+  },
+  {
         id: "m2",
         title: "Module 2: Set Theory and Functions",
         description: "Understand mathematical collections and mappings.",
@@ -326,6 +326,10 @@ export default function InteractiveDemo() {
     }
     setCurrentView(targetView);
     setSearchTerm("");
+  };
+  
+  const handleContinueLearning = () => {
+    alert("This would typically mark as complete or navigate to the next item.");
   };
   
   const Breadcrumbs = () => (
@@ -549,7 +553,7 @@ export default function InteractiveDemo() {
             <div className="pt-4">
               <ShimmerButton 
                 className="px-4 py-2"
-                 onClick={() => alert("This would typically mark as complete or navigate to the next item.")}
+                 onClick={handleContinueLearning}
                  shimmerColor="#E9D5FF"
                  background="linear-gradient(135deg, #9333EA 0%, #C026D3 100%)"
               >
