@@ -24,7 +24,6 @@ export function PromoBanner({ className }: PromoBannerProps) {
       )}
     >
       <div className="relative max-w-4xl overflow-visible">
-        <div className="backdrop-filter-[12px] relative overflow-visible border border-white/20 dark:border-white/10 bg-white/20 dark:bg-black/20 backdrop-blur-md py-4 px-3 sm:px-14 text-center transition-all duration-300 rounded-xl shadow-lg dark:shadow-2xl">
           <div className="relative z-10 flex items-center justify-center pr-10 sm:pr-0">
             <motion.div
               initial={{ scale: 0 }}
@@ -39,7 +38,6 @@ export function PromoBanner({ className }: PromoBannerProps) {
               <Sparkles className="h-4 w-4 text-pink-600 dark:text-pink-400" />
             </motion.div>
           </div>
-        </div>
       </div>
     </div>
   );
