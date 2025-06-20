@@ -85,10 +85,10 @@ export default function HeroSection() {
         <PromoBanner />
           <h1 className="bg-gradient-to-br from-purple-700 via-black to-pink-700 dark:from-purple-400 dark:via-white dark:to-pink-400 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
             <span className="block">Coursebite is the first</span>
-            <span className="relative inline-flex items-baseline justify-center w-full">
+            <span className="relative flex items-center justify-center w-full">
               <RotatingText 
                 texts={[" On-demand 1-1 Tutor", " AI Learn", " AI powered courses"]} 
-                mainClassName="inline-flex min-w-[180px] tracking-tighter leading-none font-medium"
+                mainClassName="flex justify-center items-center text-center min-w-[120px] sm:min-w-[180px] tracking-tighter leading-none font-medium"
                 splitLevelClassName="overflow-hidden"
                 elementLevelClassName="relative text-purple-600 dark:text-purple-200 text-shadow"
                 initial={{ y: "100%", opacity: 0 }}
