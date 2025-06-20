@@ -1,12 +1,13 @@
 "use client";
 
-import { BorderBeam } from "../magicui/border-beam";
+import RotatingText from "../magicui/rotating-text";
 import TextShimmer from "../magicui/text-shimmer";
 import { Button } from "../ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import { InteractiveHoverButton } from "../../components/magicui/interactive-hover-button";
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
+
 import { useRouter } from "next/navigation";
 import { PromoBanner } from "../magicui/promo-banner";
 
@@ -17,6 +18,9 @@ const VideoBackground = () => {
   // Only start loading and playing the video when it's in view
   useEffect(() => {
     if (!videoRef.current) return;
+    
+    // Store ref value in a variable to use in cleanup
+    const currentVideoRef = videoRef.current;
     
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -37,10 +41,11 @@ const VideoBackground = () => {
       { threshold: 0.1, rootMargin: "200px" }
     );
     
-    observer.observe(videoRef.current);
+    observer.observe(currentVideoRef);
     
     return () => {
-      if (videoRef.current) observer.disconnect();
+      // Use stored reference in cleanup
+      observer.disconnect();
     };
   }, []);
   
@@ -68,63 +73,59 @@ export default function HeroSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const router = useRouter();
-
-  const handleCopyPromoCode = () => {
-    navigator.clipboard.writeText("GPAHACK");
-  };
-
   return (
     <>
-      <PromoBanner
-        promoCode="GPAHACK"
-        expiryDate="May 31, 2025"
-        onClick={handleCopyPromoCode}
-      />
       <section
         id="hero"
-        className="relative mx-auto mt-32 max-w-[80rem] px-6 text-center md:px-8"
+        className="relative mx-auto mt-32 max-w-[80rem] px-6 text-center md:px-8 pb-24"
       >
-        <div className="backdrop-filter-[12px] inline-flex h-7 items-center justify-between rounded-full border border-white/5 bg-white/10 px-3 text-xs text-white dark:text-black transition-all ease-in hover:cursor-pointer hover:bg-white/20 group gap-1 translate-y-[-1rem] animate-fade-in opacity-0">
-          <TextShimmer className="inline-flex items-center justify-center">
-            <span>✨ Introducing the Coursebite Platform</span>{" "}
-            <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-          </TextShimmer>
-        </div>
+        <div className="relative z-10">
+          
 
-        <h1 className="bg-gradient-to-br dark:from-white from-black from-30% dark:to-white/40 to-black/40 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-          Coursebite is the first
-          <br className="hidden md:block" /> integrated learning ecosystem.
-        </h1>
-        <p className="mb-12 text-lg tracking-tight text-gray-400 md:text-xl text-balance translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-          Learn faster and reclaim your time with real instructors, expert-curated courses,
-          <br className="hidden md:block" /> and a personalized learning experience.
-        </p>
-        <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
-          <InteractiveHoverButton
-            className="gap-1 rounded-lg text-black"
-            onClick={() => router.push('/app/signup')}
-          >
-            <span className="text-sm font-medium">Sign Up</span>
-          </InteractiveHoverButton>
-        </div>
-        <div
-          ref={ref}
-          className="relative mt-[8rem] animate-fade-up opacity-0 [--animation-delay:400ms] [perspective:2000px]"
-        >
+        <PromoBanner />
+          <h1 className="bg-gradient-to-br from-purple-700 via-black to-pink-700 dark:from-purple-400 dark:via-white dark:to-pink-400 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+            <span className="block">Coursebite is the first</span>
+            <span className="relative inline-flex items-baseline justify-center w-full">
+              <RotatingText 
+                texts={[" On-demand 1-1 Tutor", " AI Learn", " AI powered courses"]} 
+                mainClassName="inline-flex min-w-[180px] tracking-tighter leading-none font-medium"
+                splitLevelClassName="overflow-hidden"
+                elementLevelClassName="relative text-purple-600 dark:text-purple-200 text-shadow"
+                initial={{ y: "100%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: "-100%", opacity: 0 }}
+                transition={{ type: "spring", damping: 30, stiffness: 350 }}
+                staggerDuration={0.025}
+                staggerFrom="first"
+                rotationInterval={3000}
+                splitBy="characters"
+              />
+            </span>
+          </h1>
+          <p className="mb-12 text-lg tracking-tight text-gray-600 dark:text-gray-300 md:text-xl text-balance translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+            Skip class and still pass your class with personalized learning.
+            <br className="hidden md:block"/>
+          </p>
+          <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+            <InteractiveHoverButton
+              className="gap-1 rounded-lg text-black dark:text-white"
+              onClick={() => router.push('/app/signup')}
+            >
+              <span className="text-sm font-medium">Sign Up</span>
+            </InteractiveHoverButton>
+          </div>
           <div
-            className={`rounded-xl border border-white/10 bg-[#fdfdfd] dark:bg-[#fdfdfd] bg-opacity-[0.01] before:absolute before:bottom-1/2 before:left-0 before:top-0 before:h-full before:w-full before:opacity-0 before:[filter:blur(180px)] before:[background-image:linear-gradient(to_bottom,var(--color-one),var(--color-one),transparent_40%)] ${
-              inView ? "before:animate-image-glow" : ""
-            }`}
+            ref={ref}
+            className="relative mt-[8rem] animate-fade-up opacity-0 [--animation-delay:400ms] [perspective:2000px]"
           >
-            <BorderBeam
-              size={200}
-              duration={12}
-              delay={11}
-              colorFrom="var(--color-one)"
-              colorTo="var(--color-two)"
-            />
-
-            <VideoBackground />
+            <div
+              className="rounded-xl border border-white/10 bg-white/5 dark:bg-black/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-xl"
+            >
+              {/* Full-width gradient effect that appears on hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-transparent to-pink-500/10 opacity-0 hover:opacity-100 transition-opacity duration-500 z-10"></div>
+              
+              <VideoBackground />
+            </div>
           </div>
         </div>
       </section>

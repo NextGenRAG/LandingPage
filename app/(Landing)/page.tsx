@@ -1,33 +1,50 @@
 import ClientSection from "../../components/landing/client-section";
-
 import HeroSection from "../../components/landing/hero-section";
-import PricingSection from "../../components/landing/pricing-section";
+import FreeSection from "../../components/landing/free-section";
 import Particles from "../../components/magicui/particles";
-import GetStartedSteps from "../../components/landing/get-started";
+import InteractiveDemo from "../../components/landing/interactive-demo";
 import Testimonials from "../../components/landing/testimonials";
 import Features from "../../components/landing/features";
 import { WhatIsCoursebite } from "../../components/landing/what-is-coursebite";
 import TimelineEvent from "../../components/landing/timeline-section";
+import LandingBackground from "../../components/landing/background";
 
 export default async function Page() {
   return (
     <>
-      <HeroSection />
-      {/* <CallToAction/> */}
-      <ClientSection />
-      <WhatIsCoursebite />
-      <GetStartedSteps />
-      <Features />
-      <Testimonials/>
-      <TimelineEvent/>
+      {/* Global background elements - updated with fadeOut set to true */}
+      <LandingBackground showGrid={true} fadeOut={true} />
+      
+      {/* Enhanced particles effect that follows mouse cursor */}
       <Particles
-        className="absolute inset-0 -z-10"
-        quantity={50}
-        ease={70}
-        size={0.05}
-        staticity={40}
+        className="fixed inset-0 -z-10 pointer-events-none"
+        quantity={120}
+        ease={40}  
+        size={0.06}
+        staticity={20}  
         color={"#ffffff"}
+        vx={0.2}
+        vy={0.2}
       />
+      
+      {/* Content sections - grouped by fading sequence */}
+      <div className="relative z-10">
+        {/* First sections (with grid pattern) */}
+        <div className="relative">
+          <HeroSection />
+          <FreeSection />
+          <ClientSection />
+        </div>
+        
+        {/* Sections after grid fade-out */}
+        <div className="relative">
+          <WhatIsCoursebite />
+          <InteractiveDemo />
+          <Features />
+          <Testimonials />
+          <TimelineEvent />
+        </div>
+      </div>
     </>
   );
 }

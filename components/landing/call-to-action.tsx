@@ -2,18 +2,18 @@
 
 export default function CallToAction() {
     return (
-      <section id="cta">
-        <div className="px-5 py-14 lg:px-0">
-          <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-y-5 rounded-2xl border border-slate-500/20 bg-neutral-50 p-10 shadow-inner dark:bg-neutral-900">
-            <h3 className="mx-auto max-w-2xl text-balance text-center text-2xl font-bold text-neutral-800 dark:text-white md:text-3xl lg:text-4xl">
+      <section id="cta" className="relative py-8">
+        <div className="px-5 py-14 lg:px-0 relative z-10">
+          <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-y-5 rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-10 shadow-md hover:shadow-xl transition-all duration-300">
+            <h3 className="mx-auto max-w-2xl text-balance text-center text-2xl font-bold bg-gradient-to-r from-purple-700 to-pink-700 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent md:text-3xl lg:text-4xl">
               Be the first to know about new features, special offers, and more.
             </h3>
-            <p className="mx-auto text-balance text-center md:text-lg">
+            <p className="mx-auto text-balance text-center text-gray-700 dark:text-gray-300 md:text-lg">
               Gain access to the education platform of the future!
             </p>
             <a
               href="https://links.silversnake.ai/widget/form/nmyVk94rRWyljKQ7Xipe"
-              className="shadow-small flex h-10 w-48 items-center justify-center gap-2.5 rounded-full border border-neutral-300/30 bg-neutral-900 font-medium text-white shadow-[4px_4px_0_0_rgba(0,0,0,0.9)] transition-all duration-150 active:translate-x-[2px] active:translate-y-[2px] active:scale-95 active:shadow-none"
+              className="flex h-10 w-48 items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-pink-600 hover:to-purple-600 font-medium text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               Sign up Now!
             </a>
