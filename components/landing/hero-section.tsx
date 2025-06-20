@@ -73,6 +73,24 @@ export default function HeroSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const router = useRouter();
+  
+  // Responsive text arrays for mobile vs desktop
+  const desktopTexts = [" On-demand 1-1 Tutor", " AI Learn", " AI powered courses"];
+  const mobileTexts = [" On-demand\n1-1 Tutor", " AI\nLearn", " AI powered\ncourses"];
+  
+  // Track screen size for responsive behavior
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
   return (
     <>
       <section
@@ -83,13 +101,13 @@ export default function HeroSection() {
           <div className="flex justify-center items-center w-full mb-6">
             <PromoBanner />
           </div>
-          <h1 className="bg-gradient-to-br from-purple-700 via-black to-pink-700 dark:from-purple-400 dark:via-white dark:to-pink-400 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-            <span className="block">Coursebite is the first</span>
-            <span className="relative flex items-center justify-center w-full">
+          <h1 className="bg-gradient-to-br from-purple-700 via-black to-pink-700 dark:from-purple-400 dark:via-white dark:to-pink-400 bg-clip-text py-6 text-4xl font-medium leading-tight tracking-tighter text-transparent text-balance sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+            <span className="block text-center">Coursebite is the first</span>
+            <span className="relative flex items-center justify-center w-full min-h-[1.2em] md:min-h-[1em]">
               <RotatingText 
-                texts={[" On-demand 1-1 Tutor", " AI Learn", " AI powered courses"]} 
-                mainClassName="flex justify-center items-center text-center w-full max-w-full mx-auto tracking-tighter leading-none font-medium"
-                splitLevelClassName="overflow-hidden flex justify-center"
+                texts={isMobile ? mobileTexts : desktopTexts} 
+                mainClassName={isMobile ? "flex flex-col justify-center items-center text-center w-full max-w-full mx-auto tracking-tighter leading-tight font-medium" : "flex justify-center items-center text-center w-full max-w-full mx-auto tracking-tighter leading-tight font-medium"}
+                splitLevelClassName={isMobile ? "overflow-hidden flex justify-center items-center" : "overflow-hidden flex justify-center"}
                 elementLevelClassName="relative text-purple-600 dark:text-purple-200 text-shadow text-center"
                 initial={{ y: "100%", opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -98,7 +116,7 @@ export default function HeroSection() {
                 staggerDuration={0.025}
                 staggerFrom="first"
                 rotationInterval={3000}
-                splitBy="characters"
+                splitBy={isMobile ? "lines" : "characters"}
               />
             </span>
           </h1>
