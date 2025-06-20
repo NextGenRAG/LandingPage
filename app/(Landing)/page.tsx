@@ -1,12 +1,14 @@
 import ClientSection from "../../components/landing/client-section";
 import HeroSection from "../../components/landing/hero-section";
 import FreeSection from "../../components/landing/free-section";
-import Particles from "../../components/magicui/particles";
-import InteractiveDemo from "../../components/landing/interactive-demo";
-import Testimonials from "../../components/landing/testimonials";
-import Features from "../../components/landing/features";
-import { WhatIsCoursebite } from "../../components/landing/what-is-coursebite";
-import TimelineEvent from "../../components/landing/timeline-section";
+import MemoParticles from "../../components/optimized/memo-particles";
+import {
+  SuspenseInteractiveDemo,
+  SuspenseFeatures,
+  SuspenseTestimonials,
+  SuspenseTimelineEvent,
+  SuspenseWhatIsCoursebite,
+} from "../../components/optimized/lazy-sections";
 import LandingBackground from "../../components/landing/background";
 
 export default async function Page() {
@@ -16,7 +18,7 @@ export default async function Page() {
       <LandingBackground showGrid={true} fadeOut={true} />
       
       {/* Enhanced particles effect that follows mouse cursor */}
-      <Particles
+      <MemoParticles
         className="fixed inset-0 -z-10 pointer-events-none"
         quantity={80}
         ease={200}  
@@ -38,11 +40,11 @@ export default async function Page() {
         
         {/* Sections after grid fade-out */}
         <div className="relative">
-          <WhatIsCoursebite />
-          <InteractiveDemo />
-          <Features />
-          <Testimonials />
-          <TimelineEvent />
+          <SuspenseWhatIsCoursebite />
+          <SuspenseInteractiveDemo />
+          <SuspenseFeatures />
+          <SuspenseTestimonials />
+          <SuspenseTimelineEvent />
         </div>
       </div>
     </>

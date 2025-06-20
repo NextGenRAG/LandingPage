@@ -15,10 +15,11 @@ interface Course {
   // Add other fields as needed when we expand functionality
 }
 
+import { cachedFetch, CACHE_KEYS, CACHE_TTL } from '../cache';
+
 export async function searchCourses(params: CourseSearchParams = {}): Promise<Course[]> {
   const API_URL = '/api';
   const endpoint = `${API_URL}/courses/search`;
-  console.log('Making API request to:', endpoint);
   
   try {
     const requestBody = {
@@ -26,34 +27,25 @@ export async function searchCourses(params: CourseSearchParams = {}): Promise<Co
       similarity_threshold: params.similarity_threshold || 0.3,
       max_results: params.max_results || 100
     };
-    console.log('Request body:', requestBody);
 
-    const response = await fetch(endpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(requestBody)
-    });
-
-    console.log('Response status:', response.status);
+    // Create cache key based on search parameters
+    const cacheKey = CACHE_KEYS.COURSE_SEARCH(JSON.stringify(requestBody));
     
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('API Error Response:', errorText);
-      let errorMessage;
-      try {
-        const errorJson = JSON.parse(errorText);
-        errorMessage = errorJson.error || errorText;
-      } catch {
-        errorMessage = errorText;
-      }
-      throw new Error(`Failed to fetch courses: ${errorMessage}`);
-    }
+    // Use cached fetch with 10-minute TTL
+    const data = await cachedFetch<Course[]>(
+      endpoint,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(requestBody)
+      },
+      cacheKey,
+      CACHE_TTL.MEDIUM
+    );
 
-    const data = await response.json();
-    console.log('API Response data:', data);
     if (!Array.isArray(data)) {
       console.error('Received non-array data:', data);
       return [];
