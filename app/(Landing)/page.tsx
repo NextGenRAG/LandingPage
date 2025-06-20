@@ -18,13 +18,13 @@ export default async function Page() {
       {/* Enhanced particles effect that follows mouse cursor */}
       <Particles
         className="fixed inset-0 -z-10 pointer-events-none"
-        quantity={120}
-        ease={40}  
-        size={0.06}
-        staticity={20}  
+        quantity={80}
+        ease={200}  
+        size={0.4}
+        staticity={200}  
         color={"#ffffff"}
-        vx={0.2}
-        vy={0.2}
+        vx={0}
+        vy={0}
       />
       
       {/* Content sections - grouped by fading sequence */}

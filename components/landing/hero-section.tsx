@@ -88,9 +88,9 @@ export default function HeroSection() {
             <span className="relative flex items-center justify-center w-full">
               <RotatingText 
                 texts={[" On-demand 1-1 Tutor", " AI Learn", " AI powered courses"]} 
-                mainClassName="flex justify-center items-center text-center min-w-[120px] sm:min-w-[180px] tracking-tighter leading-none font-medium"
-                splitLevelClassName="overflow-hidden"
-                elementLevelClassName="relative text-purple-600 dark:text-purple-200 text-shadow"
+                mainClassName="flex justify-center items-center text-center w-full max-w-full mx-auto tracking-tighter leading-none font-medium"
+                splitLevelClassName="overflow-hidden flex justify-center"
+                elementLevelClassName="relative text-purple-600 dark:text-purple-200 text-shadow text-center"
                 initial={{ y: "100%", opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: "-100%", opacity: 0 }}
