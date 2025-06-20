@@ -2,10 +2,10 @@
 const nextConfig = {
     images: {
       remotePatterns: [
-        { hostname: "localhost" }, 
-        { hostname: "randomuser.me" },
-        { hostname: "www.mindgrasp.ai" },
-        { hostname: "banner2.cleanpng.com" }
+        { protocol: "http", hostname: "localhost" }, 
+        { protocol: "https", hostname: "randomuser.me" },
+        { protocol: "https", hostname: "www.mindgrasp.ai" },
+        { protocol: "https", hostname: "banner2.cleanpng.com" }
       ],
     },
   };
