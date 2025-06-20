@@ -19,12 +19,12 @@ export function PromoBanner({ className }: PromoBannerProps) {
   return (
     <div
       className={cn(
-        "w-full z-50 mt-[4.5rem] flex items-center justify-center",
+        "w-full z-50 mt-[4.5rem] flex items-center justify-center px-4 sm:px-0",
         className
       )}
     >
       <div className="relative max-w-4xl overflow-visible">
-          <div className="relative z-10 flex items-center justify-center pr-10 sm:pr-0">
+          <div className="relative z-10 flex items-center justify-center">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}

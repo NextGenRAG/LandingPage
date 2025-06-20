@@ -80,9 +80,9 @@ export default function HeroSection() {
         className="relative mx-auto mt-32 max-w-[80rem] px-6 text-center md:px-8 pb-24"
       >
         <div className="relative z-10">
-          
-
-        <PromoBanner />
+          <div className="flex justify-center items-center w-full mb-6">
+            <PromoBanner />
+          </div>
           <h1 className="bg-gradient-to-br from-purple-700 via-black to-pink-700 dark:from-purple-400 dark:via-white dark:to-pink-400 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
             <span className="block">Coursebite is the first</span>
             <span className="relative flex items-center justify-center w-full">
