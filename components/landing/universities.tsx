@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Marquee from "../magicui/marquee";
 
 const img_urls = [
@@ -22,11 +23,13 @@ export function Universities() {
           <div className="relative mt-6 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm p-4 rounded-xl">
             <Marquee className="max-w-full [--duration:40s]">
               {img_urls.map((logo, idx) => (
-                <img
+                <Image
                   key={idx}
                   src={`${logo}`}
                   className="h-12 w-44 px-4 transition-all duration-300 hover:scale-110 dark:brightness-0 dark:invert opacity-70 hover:opacity-100"
                   alt={`logo-${idx}`}
+                  width={176}
+                  height={48}
                 />
               ))}
             </Marquee>

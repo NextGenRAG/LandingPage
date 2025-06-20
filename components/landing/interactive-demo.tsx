@@ -535,7 +535,7 @@ export default function InteractiveDemo() {
               It could be a video, an article, an interactive quiz, or an assignment.
             </p>
             <p>
-              For this demo, we're showing a placeholder. In the real CourseBite app, you'd find engaging
+              For this demo, we&apos;re showing a placeholder. In the real CourseBite app, you&apos;d find engaging
               learning materials here, helping you master{" "}
               <strong className="text-purple-700 dark:text-purple-400">{selectedModule.title.toLowerCase()}</strong> within the{" "}
               <strong className="text-purple-700 dark:text-purple-400">{selectedCourse.name}</strong> course.

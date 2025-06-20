@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ClientSection() {
   return (
     <section
@@ -16,39 +18,49 @@ export default function ClientSection() {
           <div className="mt-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
             <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 md:gap-x-16 [&_path]:fill-white">
               <li className="transition-all duration-300 hover:scale-110">
-                <img
+                <Image
                   src={`https://www.mindgrasp.ai/hs-fs/hubfs/mindgrasp_hatch/images/homepage/standford-logo.png?width=128&height=48&name=standford-logo.png`}
                   className="h-8 w-28 px-2 dark:brightness-0 dark:invert opacity-70 hover:opacity-100"
                   alt="Stanford University"
+                  width={112}
+                  height={32}
                 />
               </li>
               <li className="transition-all duration-300 hover:scale-110">
-                <img
+                <Image
                   src={`https://www.mindgrasp.ai/hs-fs/hubfs/mindgrasp_hatch/images/homepage/princetone-university-logo.png?width=128&height=48&name=princetone-university-logo.png`}
                   className="h-8 w-28 px-2 dark:brightness-0 dark:invert opacity-70 hover:opacity-100"
                   alt="Princeton University"
+                  width={112}
+                  height={32}
                 />
               </li>
               <li className="transition-all duration-300 hover:scale-110">
-                <img
+                <Image
                   src={`https://www.mindgrasp.ai/hs-fs/hubfs/mindgrasp_hatch/images/homepage/mit-logo.png?width=128&height=48&name=mit-logo.png`}
                   className="h-8 w-28 px-2 dark:brightness-0 dark:invert opacity-70 hover:opacity-100"
                   alt="MIT"
+                  width={112}
+                  height={32}
                 />
               </li>
 
               <li className="transition-all duration-300 hover:scale-110">
-                <img
+                <Image
                   src={`https://www.mindgrasp.ai/hs-fs/hubfs/mindgrasp_hatch/images/homepage/uoc-logo.png?width=128&height=48&name=uoc-logo.png`}
                   className="h-8 w-28 px-2 dark:brightness-0 dark:invert opacity-70 hover:opacity-100"
                   alt="University of California"
+                  width={112}
+                  height={32}
                 />
               </li>
               <li className="transition-all duration-300 hover:scale-110">
-                <img
+                <Image
                   src={`https://www.mindgrasp.ai/hs-fs/hubfs/mindgrasp_hatch/images/homepage/yu-logo.png?width=128&height=48&name=yu-logo.png`}
                   className="h-8 w-28 px-2 dark:brightness-0 dark:invert opacity-70 hover:opacity-100"
                   alt="Yale University"
+                  width={112}
+                  height={32}
                 />
               </li>
             </ul>

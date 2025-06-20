@@ -103,8 +103,8 @@ export default function HeroSection() {
             </span>
           </h1>
           <p className="mb-12 text-lg tracking-tight text-gray-600 dark:text-gray-300 md:text-xl text-balance translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-            Learn faster and reclaim your time with real instructors, expert-curated courses,
-            <br className="hidden md:block" /> and a personalized learning experience.
+            Skip class and still pass your class with personalized learning.
+            <br className="hidden md:block"/>
           </p>
           <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
             <InteractiveHoverButton

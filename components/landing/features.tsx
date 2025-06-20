@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Section from "../ui/section";
 import { cn } from "../../lib/utils";
 
@@ -13,19 +14,19 @@ const features = [
         <div className="flex flex-col items-center gap-3 min-w-0 group">
           <h4 className="font-medium bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">Study</h4>
           <div className="w-[32rem] max-w-full flex items-center justify-center">
-            <img src="/study.png" alt="Study" className="h-96 w-auto object-contain rounded shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1" />
+            <Image src="/study.png" alt="Study" className="h-96 w-auto object-contain rounded shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1" width={500} height={384} />
           </div>
         </div>
         <div className="flex flex-col items-center gap-3 min-w-0 group">
           <h4 className="font-medium bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">Practice</h4>
           <div className="w-[32rem] max-w-full flex items-center justify-center">
-            <img src="/practice.png" alt="Practice" className="h-96 w-auto object-contain rounded shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1" />
+            <Image src="/practice.png" alt="Practice" className="h-96 w-auto object-contain rounded shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1" width={500} height={384} />
           </div>
         </div>
         <div className="flex flex-col items-center gap-3 min-w-0 group">
           <h4 className="font-medium bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">Reinforce</h4>
           <div className="w-[32rem] max-w-full flex items-center justify-center">
-            <img src="/reinforce.png" alt="Reinforce" className="h-96 w-auto object-contain rounded shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1" />
+            <Image src="/reinforce.png" alt="Reinforce" className="h-96 w-auto object-contain rounded shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1" width={500} height={384} />
           </div>
         </div>
       </div>
@@ -38,10 +39,12 @@ const features = [
       "Keep all your modules, notes, and resources organized in one place. Effortlessly manage your study schedule and never lose track of your progress.",
     content: (
       <div className="flex justify-center w-full mt-6 group">
-        <img
+        <Image
           src="/Modules.png"
           alt="Organization"
           className="h-96 w-auto object-contain rounded shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1"
+          width={500}
+          height={384}
         />
       </div>
     ),
@@ -53,10 +56,12 @@ const features = [
       "Use comprehensive quizzes and assessments to gauge your understanding of key concepts, track your progress, and get real-time feedback.",
     content: (
       <div className="flex justify-center w-full mt-6 group">
-        <img
+        <Image
           src="/gradebook.png"
           alt="Gradebook showing detailed course progress"
           className="h-96 w-auto object-contain rounded shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1"
+          width={500}
+          height={384}
         />
       </div>
     ),
