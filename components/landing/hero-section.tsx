@@ -73,18 +73,8 @@ export default function HeroSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const router = useRouter();
-
-  const handleCopyPromoCode = () => {
-    navigator.clipboard.writeText("GPAHACK");
-  };
-
   return (
     <>
-      <PromoBanner
-        promoCode="GPAHACK"
-        expiryDate="May 31, 2025"
-        onClick={handleCopyPromoCode}
-      />
       <section
         id="hero"
         className="relative mx-auto mt-32 max-w-[80rem] px-6 text-center md:px-8 pb-24"
@@ -92,13 +82,13 @@ export default function HeroSection() {
         <div className="relative z-10">
           
 
-
+        <PromoBanner />
           <h1 className="bg-gradient-to-br from-purple-700 via-black to-pink-700 dark:from-purple-400 dark:via-white dark:to-pink-400 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-            Coursebite has the first 
-            <span className="relative inline-flex items-baseline">
+            <span className="block">Coursebite is the first</span>
+            <span className="relative inline-flex items-baseline justify-center w-full">
               <RotatingText 
                 texts={[" On-demand 1-1 Tutor", " AI Learn", " AI powered courses"]} 
-                mainClassName="inline-flex ml-2 min-w-[180px] tracking-tighter leading-none font-medium"
+                mainClassName="inline-flex min-w-[180px] tracking-tighter leading-none font-medium"
                 splitLevelClassName="overflow-hidden"
                 elementLevelClassName="relative text-purple-600 dark:text-purple-200 text-shadow"
                 initial={{ y: "100%", opacity: 0 }}
@@ -110,10 +100,6 @@ export default function HeroSection() {
                 rotationInterval={3000}
                 splitBy="characters"
               />
-              {/* Subtle gradient background that matches the heading style */}
-              {/* <div className="absolute inset-0 rounded-lg -z-10">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-pink-100/20 dark:from-purple-800/30 dark:to-pink-800/30 rounded-lg opacity-40"></div>
-              </div> */}
             </span>
           </h1>
           <p className="mb-12 text-lg tracking-tight text-gray-600 dark:text-gray-300 md:text-xl text-balance translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
