@@ -10,64 +10,7 @@ import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 
 import { useRouter } from "next/navigation";
 import { PromoBanner } from "../magicui/promo-banner";
-
-const VideoBackground = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  
-  // Only start loading and playing the video when it's in view
-  useEffect(() => {
-    if (!videoRef.current) return;
-    
-    // Store ref value in a variable to use in cleanup
-    const currentVideoRef = videoRef.current;
-    
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          
-          // Add a small delay before loading the video to improve perceived performance
-          setTimeout(() => {
-            if (videoRef.current) {
-              videoRef.current.load();
-              videoRef.current.play().catch(error => {
-                console.warn("Video autoplay failed:", error);
-              });
-            }
-          }, 300);
-        }
-      },
-      { threshold: 0.1, rootMargin: "200px" }
-    );
-    
-    observer.observe(currentVideoRef);
-    
-    return () => {
-      // Use stored reference in cleanup
-      observer.disconnect();
-    };
-  }, []);
-  
-  return (
-    <video
-      ref={videoRef}
-      autoPlay={isVisible}
-      loop
-      muted
-      playsInline
-      preload="none"
-      poster="/hero-light.png"
-      className="relative w-full h-full rounded-[inherit] border object-cover"
-      style={{ width: "100%", height: "100%" }}
-    >
-      {isVisible && (
-        <source src="/hero-vid.mp4" type="video/mp4" />
-      )}
-      Your browser does not support HTML5 video.
-    </video>
-  );
-};
+import RiveHero from "./rive-hero";
 
 export default function HeroSection() {
   const ref = useRef(null);
@@ -142,7 +85,7 @@ export default function HeroSection() {
               {/* Full-width gradient effect that appears on hover */}
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-transparent to-pink-500/10 opacity-0 hover:opacity-100 transition-opacity duration-500 z-10"></div>
               
-              <VideoBackground />
+              <RiveHero />
             </div>
           </div>
         </div>
